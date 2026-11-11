@@ -78,6 +78,10 @@
   .menu a { color:var(--soluk); }
   .menu a:hover { color:#fff; }
   .menu .cta { color:#fff; background:var(--vurgu); padding:9px 16px; border-radius:10px; font-weight:600; }
+  .language-select { margin-left:8px; appearance:none; border:1px solid var(--cizgi); border-radius:9px; padding:9px 30px 9px 11px; color:var(--yazi); background:#0f1a2c; font:inherit; font-size:.82rem; cursor:pointer; }
+  .language-select:focus { outline:2px solid var(--vurgu-acik); outline-offset:2px; }
+  @media (max-width:900px) { .language-select { margin-left:auto; } }
+
 
   .kahraman { display:grid; grid-template-columns:1.08fr .92fr; gap:44px; align-items:center; padding:46px 0 30px; }
   .rozet { display:inline-flex; align-items:center; gap:8px; padding:7px 12px; border:1px solid var(--cizgi);
@@ -226,6 +230,10 @@
       <a href="#sss">SSS</a>
       <a class="cta" href="https://github.com/Myozan/YamanPcCleaner/releases/latest">İndir</a>
     </nav>
+    <label class="sr-only" for="language-select">Language</label>
+    <select id="language-select" class="language-select" aria-label="Select language">
+      <option value="tr">Türkçe</option><option value="en">English</option><option value="de">Deutsch</option><option value="fr">Français</option>
+    </select>
   </div>
 </header>
 
@@ -429,5 +437,79 @@
     </div>
   </div>
 </footer>
+
+<script>
+(function () {
+  const translations = {
+    en: {
+      "Özellikler":"Features","Nasıl çalışır?":"How it works","Güvenlik":"Security","SSS":"FAQ","İndir":"Download",
+      "Windows 10 / 11 · Ücretsiz · Açık kaynak":"Windows 10 / 11 · Free · Open source",
+      "Bilgisayarın için ":"A calmer, faster ","sakin, hızlı":"PC care experience.","Bir program, tam bakım":"One app, complete care",
+      "RAM'i boşaltır, gereksiz dosyaları temizler, “bellek yetersiz” hatasının sebebini bulur ve oyunlarda takılmayı azaltan ayarları tek yerde toplar. Kurulum yok: tek bir ":"Frees RAM, removes junk files, helps diagnose low-memory warnings and brings gaming-focused settings together. No installer: just one ",
+      "Ücretsiz indir":"Download free","Kaynak kodu":"Source code","Özellikler":"Features","Tek program, tam bakım":"One app, complete care",
+      "Günlük temizlikten oyun performansına":"From everyday cleanup to gaming performance",
+      "Her özellik aynı ilkeyle çalışır: önce gösterir, sonra sorar; değiştirdiği her ayarı geri alabilirsin.":"Every feature follows one principle: show first, ask before changing, and let you undo supported changes.",
+      "Üç adımda bakım":"Care in three steps","Güven önce gelir":"Security comes first","Güvenli mi?":"Is it safe?",
+      "Sık sorulan sorular":"Frequently asked questions","Bilgisayarına bir bakım molası ver.":"Give your PC a maintenance break.",
+      "En son sürümü indir":"Download the latest release","Yaman Software ürünü":"A Yaman Software product",
+      "Ürün":"Product","Kaynaklar":"Resources","Özellikler":"Features","Nasıl çalışır?":"How it works",
+      "Güvenlik yaklaşımı":"Security","Son sürümü indir":"Download latest release","GitHub deposu":"GitHub repository",
+      "Sürüm geçmişi":"Release history","Dokümantasyon":"Documentation","MIT lisansı":"MIT License",
+      "Tüm hakları saklıdır.":"All rights reserved."
+    },
+    de: {
+      "Özellikler":"Funktionen","Nasıl çalışır?":"So funktioniert's","Güvenlik":"Sicherheit","SSS":"FAQ","İndir":"Herunterladen",
+      "Windows 10 / 11 · Ücretsiz · Açık kaynak":"Windows 10 / 11 · Kostenlos · Open Source",
+      "Ücretsiz indir":"Kostenlos herunterladen","Kaynak kodu":"Quellcode",
+      "Günlük temizlikten oyun performansına":"Von der täglichen Reinigung bis zur Gaming-Leistung",
+      "Her özellik aynı ilkeyle çalışır: önce gösterir, sonra sorar; değiştirdiği her ayarı geri alabilirsin.":"Jede Funktion folgt einem Prinzip: erst anzeigen, dann fragen – unterstützte Änderungen lassen sich rückgängig machen.",
+      "Üç adımda bakım":"Wartung in drei Schritten","Güven önce gelir":"Sicherheit steht an erster Stelle","Güvenli mi?":"Ist es sicher?",
+      "Sık sorulan sorular":"Häufig gestellte Fragen","Bilgisayarına bir bakım molası ver.":"Gönn deinem PC eine Wartungspause.",
+      "En son sürümü indir":"Neueste Version herunterladen","Yaman Software ürünü":"Ein Produkt von Yaman Software",
+      "Ürün":"Produkt","Kaynaklar":"Ressourcen","Güvenlik yaklaşımı":"Sicherheitskonzept",
+      "GitHub deposu":"GitHub-Repository","Sürüm geçmişi":"Versionsverlauf","Dokümantasyon":"Dokumentation","MIT lisansı":"MIT-Lizenz",
+      "Tüm hakları saklıdır.":"Alle Rechte vorbehalten."
+    },
+    fr: {
+      "Özellikler":"Fonctionnalités","Nasıl çalışır?":"Comment ça marche ?","Güvenlik":"Sécurité","SSS":"FAQ","İndir":"Télécharger",
+      "Windows 10 / 11 · Ücretsiz · Açık kaynak":"Windows 10 / 11 · Gratuit · Open source",
+      "Ücretsiz indir":"Télécharger gratuitement","Kaynak kodu":"Code source",
+      "Günlük temizlikten oyun performansına":"Du nettoyage quotidien aux performances de jeu",
+      "Her özellik aynı ilkeyle çalışır: önce gösterir, sonra sorar; değiştirdiği her ayarı geri alabilirsin.":"Chaque fonction suit le même principe : afficher d'abord, demander ensuite et permettre l'annulation des changements pris en charge.",
+      "Üç adımda bakım":"L'entretien en trois étapes","Güven önce gelir":"La sécurité avant tout","Güvenli mi?":"Est-ce sûr ?",
+      "Sık sorulan sorular":"Questions fréquentes","Bilgisayarına bir bakım molası ver.":"Offrez une pause entretien à votre PC.",
+      "En son sürümü indir":"Télécharger la dernière version","Yaman Software ürünü":"Un produit Yaman Software",
+      "Ürün":"Produit","Kaynaklar":"Ressources","Güvenlik yaklaşımı":"Sécurité",
+      "GitHub deposu":"Dépôt GitHub","Sürüm geçmişi":"Historique des versions","Dokümantasyon":"Documentation","MIT lisansı":"Licence MIT",
+      "Tüm hakları saklıdır.":"Tous droits réservés."
+    }
+  };
+  const selector = document.getElementById('language-select');
+  if (!selector) return;
+  function applyLanguage(lang) {
+    const map = translations[lang] || {};
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    let node;
+    while ((node = walker.nextNode())) {
+      const original = node.nodeValue;
+      const trimmed = original.trim();
+      if (map[trimmed]) node.nodeValue = original.replace(trimmed, map[trimmed]);
+    }
+    document.documentElement.lang = lang;
+    document.title = lang === 'en' ? 'Yaman PC Cleaner – Free PC Cleaner for Windows 10/11' :
+      lang === 'de' ? 'Yaman PC Cleaner – Kostenloser PC-Reiniger für Windows 10/11' :
+      lang === 'fr' ? 'Yaman PC Cleaner – Nettoyeur PC gratuit pour Windows 10/11' :
+      'Yaman PC Cleaner – Ücretsiz PC Temizleme ve Hızlandırma Programı (Windows 10/11)';
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+    if (ogLocale) ogLocale.content = ({tr:'tr_TR',en:'en_US',de:'de_DE',fr:'fr_FR'})[lang];
+    try { localStorage.setItem('ypc-language', lang); } catch (_) {}
+  }
+  selector.addEventListener('change', () => applyLanguage(selector.value));
+  let saved = 'tr';
+  try { saved = localStorage.getItem('ypc-language') || 'tr'; } catch (_) {}
+  selector.value = saved;
+  if (saved !== 'tr') applyLanguage(saved);
+})();
+</script>
 </body>
 </html>
