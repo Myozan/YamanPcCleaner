@@ -169,7 +169,11 @@
   .ekran-kart strong { display:block; color:var(--yazi); font-size:.98rem; letter-spacing:-.01em; }
   .ekran-kart span { color:var(--soluk); font-size:.82rem; text-align:right; }
   .galeri-not { display:flex; align-items:center; gap:9px; margin:17px 0 0; color:var(--soluk); font-size:.84rem; }
-  .galeri-not:before { content:"↗"; display:grid; place-items:center; width:25px; height:25px; border-radius:8px; color:var(--camgobegi); background:rgba(34,211,238,.1); } 
+  .galeri-not:before { content:"↗"; display:grid; place-items:center; width:25px; height:25px; border-radius:8px; color:var(--camgobegi); background:rgba(34,211,238,.1); }
+  .ekran-kart strong b { display:inline-grid; place-items:center; width:25px; height:25px; margin-right:8px; border-radius:8px; color:#071426; background:linear-gradient(135deg,#22d3ee,#60a5fa); font-size:.75rem; }
+  .galeri-guven { display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:20px; color:var(--soluk); font-size:.82rem; }
+  .galeri-guven span:before { content:"✓"; color:#34d399; font-weight:900; margin-right:7px; }
+ 
   @media (max-width:900px) {
     .ekran-galerisi { gap:14px; }
     .ekran-kart div { align-items:flex-start; flex-direction:column; gap:5px; }
@@ -307,31 +311,36 @@
 
   <section id="ekran-goruntuleri">
     <div class="bolum-baslik">
-      <div class="etiket">GERÇEK UYGULAMA EKRANLARI</div>
-      <h2>Yaman PC Cleaner'ı yakından keşfet.</h2>
-      <p>Konsept çizimler değil; Windows üzerinde çalışan Yaman PC Cleaner arayüzünden gerçek ekran görüntüleri. Sistem sağlığını, bakım araçlarını ve performans kontrollerini tek bir merkezden incele.</p>
+      <div class="etiket">ÜRÜNÜN İÇİNDEN · v1.3.0</div>
+      <h2>Her ayrıntı gerçek. Her kontrol senin elinde.</h2>
+      <p>Yaman PC Cleaner'ın Windows üzerinde çalışan gerçek arayüzünü keşfet. Sistem sağlığından donanım takibine, tek tık optimizasyondan bakım sonuçlarına kadar günlük kullanım deneyimini incele.</p>
     </div>
     <div class="ekran-galerisi">
-      <article class="ekran-kart">
-        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-10.png" target="_blank" rel="noopener" aria-label="Genel Bakış ekran görüntüsünü tam boyutta aç">
-          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-10.png" alt="Yaman PC Cleaner v1.3.0 Genel Bakış: sistem puanı, RAM, disk ve bakım önerileri" loading="lazy">
+      <article class="ekran-kart ekran-kart-ana">
+        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-10.png" target="_blank" rel="noopener" aria-label="Genel Bakış ekranını tam boyutta aç">
+          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-10.png" alt="Yaman PC Cleaner v1.3.0 Genel Bakış: sistem sağlık puanı, RAM, disk, sürücü ve bakım önerileri" loading="lazy">
         </a>
-        <div><strong>01 · Genel Bakış</strong><span>Sistem puanı ve bakım önerileri</span></div>
+        <div><strong><b>01</b> Genel Bakış</strong><span>Sistem sağlığı · Öneriler · Tek merkez</span></div>
       </article>
       <article class="ekran-kart">
-        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-59.png" target="_blank" rel="noopener" aria-label="Sistem araçları ekran görüntüsünü tam boyutta aç">
-          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-59.png" alt="Yaman PC Cleaner sistem araçları ve donanım izleme ekranı" loading="lazy">
+        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-59.png" target="_blank" rel="noopener" aria-label="Sistem İzleme ekranını tam boyutta aç">
+          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-59.png" alt="Yaman PC Cleaner Sistem İzleme: CPU, GPU, RAM, VRAM, sıcaklıklar ve süreç listesi" loading="lazy">
         </a>
-        <div><strong>02 · Sistem araçları</strong><span>Donanım ve kaynak takibi</span></div>
+        <div><strong><b>02</b> Sistem İzleme</strong><span>CPU · GPU · RAM · Sıcaklık</span></div>
       </article>
       <article class="ekran-kart">
-        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-255.png" target="_blank" rel="noopener" aria-label="Bakım araçları ekran görüntüsünü tam boyutta aç">
-          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-255.png" alt="Yaman PC Cleaner bakım ve optimizasyon araçları ekranı" loading="lazy">
+        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-255.png" target="_blank" rel="noopener" aria-label="Bakım ve optimizasyon ekranını tam boyutta aç">
+          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-255.png" alt="Yaman PC Cleaner optimizasyon sonucu: boşaltılan RAM, kazanılan disk alanı ve kapatılan program" loading="lazy">
         </a>
-        <div><strong>03 · Bakım ve optimizasyon</strong><span>Kontrollü sistem iyileştirmeleri</span></div>
+        <div><strong><b>03</b> Bakım ve Optimizasyon</strong><span>RAM kazanımı · Disk alanı · Sonuç özeti</span></div>
       </article>
     </div>
-    <p class="galeri-not">Herhangi bir ekran görüntüsüne tıklayarak orijinal boyutunda görüntüleyebilirsin.</p>
+    <div class="galeri-guven">
+      <span>✓ Gerçek uygulama ekranları</span>
+      <span>✓ Windows 10 / 11</span>
+      <span>✓ Kullanıcı kontrolünde bakım</span>
+    </div>
+    <p class="galeri-not">Ekran görüntüsünü tam boyutta incelemek için ilgili görsele tıkla.</p>
   </section>
 
   <section id="ozellikler">
