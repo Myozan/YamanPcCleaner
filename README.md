@@ -4,6 +4,16 @@
 
 Tanıtım sayfası: https://myozan.github.io/YamanPcCleaner/
 
+<p align="center">
+  <img src="kaynaklar/logo-256.png" width="104" alt="Yaman PC Cleaner logo">
+</p>
+
+<p align="center">
+  <img src="kaynaklar/onizleme-10.png" width="32%" alt="Yaman PC Cleaner ekran görüntüsü 1">
+  <img src="kaynaklar/onizleme-59.png" width="32%" alt="Yaman PC Cleaner ekran görüntüsü 2">
+  <img src="kaynaklar/onizleme-255.png" width="32%" alt="Yaman PC Cleaner ekran görüntüsü 3">
+</p>
+
 **[En son sürümü indir](https://github.com/Myozan/YamanPcCleaner/releases/latest)** · Windows 10 / 11 · Kurulum gerektirmez (tek exe) · Türkçe · Ücretsiz ve açık kaynak ([MIT](LICENSE)) · [Sürüm notları](CHANGELOG.md)
 
 ## Neler yapabilir
