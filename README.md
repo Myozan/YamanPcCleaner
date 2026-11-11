@@ -155,13 +155,14 @@ Kod, test, dokümantasyon, çeviri ve hata raporları değerlidir. Katkı gönde
 
 Bir ⭐ bırakarak Yaman PC Cleaner'ın daha fazla Windows kullanıcısı tarafından keşfedilmesine destek olabilirsin.
 
+
 <a href="https://github.com/Myozan/YamanPcCleaner/stargazers">
   <img src="https://img.shields.io/badge/⭐%20YAMAN%20PC%20CLEANER'A%20STAR%20VER-181717?style=for-the-badge&logo=github" alt="GitHub'da yıldız ver">
 </a>
 
-**YAMAN SOFTWARE**  
+** YAMAN SOFTWARE  by Ozan Yaman **  
 Technology · Innovation · Software
 
-<sub>Designed & developed with a focus on transparency and user control.</sub>
+<sub>Designed & developed with a focus on transparency and user control. </sub>
 
 </div>
