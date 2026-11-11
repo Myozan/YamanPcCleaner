@@ -154,13 +154,22 @@
   .adim h3 { margin:0 0 5px; font-size:1rem; }
   .adim p { margin:0; color:var(--soluk); font-size:.9rem; }
 
-  .ekran-galerisi { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-  .ekran-kart { overflow:hidden; border:1px solid var(--cizgi); border-radius:16px; background:rgba(15,26,44,.78); }
-  .ekran-kart img { display:block; width:100%; height:auto; aspect-ratio:16/10; object-fit:cover; background:#0b1524; }
-  .ekran-kart div { padding:13px 15px; }
-  .ekran-kart strong { display:block; color:var(--yazi); font-size:.92rem; }
-  .ekran-kart span { color:var(--soluk); font-size:.8rem; }
-  .galeri-not { margin:14px 0 0; color:var(--soluk); font-size:.82rem; }
+  #ekran-goruntuleri { position:relative; }
+  #ekran-goruntuleri .bolum-baslik { max-width:760px; margin-bottom:28px; }
+  #ekran-goruntuleri .bolum-baslik .etiket { color:var(--camgobegi); letter-spacing:.14em; font-weight:800; }
+  #ekran-goruntuleri .bolum-baslik h2 { font-size:clamp(2rem,4vw,3rem); letter-spacing:-.045em; margin:9px 0 12px; }
+  #ekran-goruntuleri .bolum-baslik p { max-width:650px; font-size:1.02rem; line-height:1.75; }
+  .ekran-galerisi { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; align-items:start; }
+  .ekran-kart { min-width:0; overflow:hidden; border:1px solid rgba(96,165,250,.22); border-radius:18px; background:linear-gradient(145deg,rgba(17,31,52,.98),rgba(8,17,31,.98)); box-shadow:0 18px 44px rgba(0,0,0,.2); transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease; }
+  .ekran-kart:first-child { grid-column:1/-1; }
+  .ekran-kart:hover { transform:translateY(-4px); border-color:rgba(34,211,238,.55); box-shadow:0 22px 54px rgba(0,0,0,.3),0 0 28px rgba(34,211,238,.07); }
+  .ekran-kart a { display:block; padding:12px; background:radial-gradient(ellipse at 50% 0%,rgba(59,130,246,.12),transparent 65%); }
+  .ekran-kart img { display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; border-radius:10px; background:#07101d; }
+  .ekran-kart div { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:15px 18px 17px; border-top:1px solid rgba(148,163,184,.1); }
+  .ekran-kart strong { display:block; color:var(--yazi); font-size:.98rem; letter-spacing:-.01em; }
+  .ekran-kart span { color:var(--soluk); font-size:.82rem; text-align:right; }
+  .galeri-not { display:flex; align-items:center; gap:9px; margin:17px 0 0; color:var(--soluk); font-size:.84rem; }
+  .galeri-not:before { content:"↗"; display:grid; place-items:center; width:25px; height:25px; border-radius:8px; color:var(--camgobegi); background:rgba(34,211,238,.1); }
   .guvenlik { display:grid; grid-template-columns:.95fr 1.05fr; gap:26px; align-items:start; }
   .guvenlik-kart { border:1px solid var(--cizgi); border-radius:var(--yaricap); padding:24px; background:linear-gradient(180deg, rgba(21,36,59,.8), rgba(15,26,44,.72)); }
   .guvenlik-kart h2 { margin:0 0 8px; font-size:1.6rem; letter-spacing:-.02em; }
@@ -285,31 +294,31 @@
 
   <section id="ekran-goruntuleri">
     <div class="bolum-baslik">
-      <div class="etiket">Uygulamadan görüntüler</div>
-      <h2>Arayüzü yakından tanı</h2>
-      <p>Yaman PC Cleaner'ın gerçek uygulama önizlemeleri. Temel araçları tek bir masaüstü deneyiminde bir araya getirir.</p>
+      <div class="etiket">GERÇEK UYGULAMA EKRANLARI</div>
+      <h2>Yaman PC Cleaner'ı yakından keşfet.</h2>
+      <p>Konsept çizimler değil; Windows üzerinde çalışan Yaman PC Cleaner arayüzünden gerçek ekran görüntüleri. Sistem sağlığını, bakım araçlarını ve performans kontrollerini tek bir merkezden incele.</p>
     </div>
     <div class="ekran-galerisi">
       <article class="ekran-kart">
-        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-10.png" target="_blank" rel="noopener">
-          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-10.png" alt="Yaman PC Cleaner uygulama ekran görüntüsü 1" loading="lazy">
+        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-10.png" target="_blank" rel="noopener" aria-label="Genel Bakış ekran görüntüsünü tam boyutta aç">
+          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-10.png" alt="Yaman PC Cleaner v1.3.0 Genel Bakış: sistem puanı, RAM, disk ve bakım önerileri" loading="lazy">
         </a>
-        <div><strong>Uygulama önizlemesi</strong><span>Yaman PC Cleaner arayüzü</span></div>
+        <div><strong>01 · Genel Bakış</strong><span>Sistem puanı ve bakım önerileri</span></div>
       </article>
       <article class="ekran-kart">
-        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-59.png" target="_blank" rel="noopener">
-          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-59.png" alt="Yaman PC Cleaner uygulama ekran görüntüsü 2" loading="lazy">
+        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-59.png" target="_blank" rel="noopener" aria-label="Sistem araçları ekran görüntüsünü tam boyutta aç">
+          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-59.png" alt="Yaman PC Cleaner sistem araçları ve donanım izleme ekranı" loading="lazy">
         </a>
-        <div><strong>Uygulama önizlemesi</strong><span>Sistem araçlarından görünüm</span></div>
+        <div><strong>02 · Sistem araçları</strong><span>Donanım ve kaynak takibi</span></div>
       </article>
       <article class="ekran-kart">
-        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-255.png" target="_blank" rel="noopener">
-          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-255.png" alt="Yaman PC Cleaner uygulama ekran görüntüsü 3" loading="lazy">
+        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-255.png" target="_blank" rel="noopener" aria-label="Bakım araçları ekran görüntüsünü tam boyutta aç">
+          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-255.png" alt="Yaman PC Cleaner bakım ve optimizasyon araçları ekranı" loading="lazy">
         </a>
-        <div><strong>Uygulama önizlemesi</strong><span>Bakım deneyiminden görünüm</span></div>
+        <div><strong>03 · Bakım ve optimizasyon</strong><span>Kontrollü sistem iyileştirmeleri</span></div>
       </article>
     </div>
-    <p class="galeri-not">Görüntüleri büyütmek için üzerlerine tıklayabilirsin.</p>
+    <p class="galeri-not">Herhangi bir ekran görüntüsüne tıklayarak orijinal boyutunda görüntüleyebilirsin.</p>
   </section>
 
   <section id="ozellikler">
