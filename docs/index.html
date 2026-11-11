@@ -491,9 +491,10 @@
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     let node;
     while ((node = walker.nextNode())) {
-      const original = node.nodeValue;
+      if (node.__ypcOriginalText === undefined) node.__ypcOriginalText = node.nodeValue;
+      const original = node.__ypcOriginalText;
       const trimmed = original.trim();
-      if (map[trimmed]) node.nodeValue = original.replace(trimmed, map[trimmed]);
+      node.nodeValue = map[trimmed] ? original.replace(trimmed, map[trimmed]) : original;
     }
     document.documentElement.lang = lang;
     document.title = lang === 'en' ? 'Yaman PC Cleaner – Free PC Cleaner for Windows 10/11' :
