@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="kaynaklar/logo.png" alt="Yaman PC Cleaner" width="112" />
+<img src="kaynaklar/logo-256.png" alt="Yaman PC Cleaner" width="112" />
 
 # YAMAN PC CLEANER
 
