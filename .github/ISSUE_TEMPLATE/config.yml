@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Güvenlik açığı bildirimi
+    url: https://github.com/Myozan/YamanPcCleaner/security
+    about: Güvenlik sorunlarını herkese açık issue olarak paylaşma; özel bildirim kanalını kullan.
+  - name: Tanıtım sitesi
+    url: https://myozan.github.io/YamanPcCleaner/
+    about: Ürünü ve ekran görüntülerini incele.
