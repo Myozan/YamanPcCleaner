@@ -169,7 +169,20 @@
   .ekran-kart strong { display:block; color:var(--yazi); font-size:.98rem; letter-spacing:-.01em; }
   .ekran-kart span { color:var(--soluk); font-size:.82rem; text-align:right; }
   .galeri-not { display:flex; align-items:center; gap:9px; margin:17px 0 0; color:var(--soluk); font-size:.84rem; }
-  .galeri-not:before { content:"↗"; display:grid; place-items:center; width:25px; height:25px; border-radius:8px; color:var(--camgobegi); background:rgba(34,211,238,.1); }
+  .galeri-not:before { content:"↗"; display:grid; place-items:center; width:25px; height:25px; border-radius:8px; color:var(--camgobegi); background:rgba(34,211,238,.1); } 
+  @media (max-width:900px) {
+    .ekran-galerisi { gap:14px; }
+    .ekran-kart div { align-items:flex-start; flex-direction:column; gap:5px; }
+    .ekran-kart span { text-align:left; }
+  }
+  @media (max-width:620px) {
+    .ekran-galerisi { grid-template-columns:1fr; gap:14px; }
+    .ekran-kart:first-child { grid-column:auto; }
+    .ekran-kart a { padding:8px; }
+    .ekran-kart div { padding:12px 14px 14px; }
+    #ekran-goruntuleri .bolum-baslik h2 { font-size:2rem; }
+    #ekran-goruntuleri .bolum-baslik p { font-size:.94rem; }
+  }
   .guvenlik { display:grid; grid-template-columns:.95fr 1.05fr; gap:26px; align-items:start; }
   .guvenlik-kart { border:1px solid var(--cizgi); border-radius:var(--yaricap); padding:24px; background:linear-gradient(180deg, rgba(21,36,59,.8), rgba(15,26,44,.72)); }
   .guvenlik-kart h2 { margin:0 0 8px; font-size:1.6rem; letter-spacing:-.02em; }
@@ -450,6 +463,13 @@
 <script>
 (function () {
   const common = {
+    "GERÇEK UYGULAMA EKRANLARI":"REAL APP SCREENSHOTS",
+    "Yaman PC Cleaner'ı yakından keşfet.":"Explore Yaman PC Cleaner up close.",
+    "Konsept çizimler değil; Windows üzerinde çalışan Yaman PC Cleaner arayüzünden gerçek ekran görüntüleri. Sistem sağlığını, bakım araçlarını ve performans kontrollerini tek bir merkezden incele.":"Not concept art: these are real screenshots from Yaman PC Cleaner running on Windows. Explore system health, maintenance tools and performance controls in one place.",
+    "01 · Genel Bakış":"01 · Overview","Sistem puanı ve bakım önerileri":"System score and maintenance suggestions",
+    "02 · Sistem araçları":"02 · System tools","Donanım ve kaynak takibi":"Hardware and resource monitoring",
+    "03 · Bakım ve optimizasyon":"03 · Maintenance and optimization","Kontrollü sistem iyileştirmeleri":"Controlled system improvements",
+    "Herhangi bir ekran görüntüsüne tıklayarak orijinal boyutunda görüntüleyebilirsin.":"Select any screenshot to view it at full size.",
     "Özellikler":"Features","Nasıl çalışır?":"How it works","Güvenlik":"Security","SSS":"FAQ","İndir":"Download",
     "Windows 10 / 11 · Ücretsiz · Açık kaynak":"Windows 10 / 11 · Free · Open source",
     "Bilgisayarın için":"Your PC deserves a","sakin, hızlı":"calm, fast","bir bakım merkezi.":"care experience.",
