@@ -440,50 +440,65 @@
 
 <script>
 (function () {
-  const translations = {
-    en: {
-      "Özellikler":"Features","Nasıl çalışır?":"How it works","Güvenlik":"Security","SSS":"FAQ","İndir":"Download",
-      "Windows 10 / 11 · Ücretsiz · Açık kaynak":"Windows 10 / 11 · Free · Open source",
-      "Bilgisayarın için ":"A calmer, faster ","sakin, hızlı":"PC care experience.","Bir program, tam bakım":"One app, complete care",
-      "RAM'i boşaltır, gereksiz dosyaları temizler, “bellek yetersiz” hatasının sebebini bulur ve oyunlarda takılmayı azaltan ayarları tek yerde toplar. Kurulum yok: tek bir ":"Frees RAM, removes junk files, helps diagnose low-memory warnings and brings gaming-focused settings together. No installer: just one ",
-      "Ücretsiz indir":"Download free","Kaynak kodu":"Source code","Özellikler":"Features","Tek program, tam bakım":"One app, complete care",
-      "Günlük temizlikten oyun performansına":"From everyday cleanup to gaming performance",
-      "Her özellik aynı ilkeyle çalışır: önce gösterir, sonra sorar; değiştirdiği her ayarı geri alabilirsin.":"Every feature follows one principle: show first, ask before changing, and let you undo supported changes.",
-      "Üç adımda bakım":"Care in three steps","Güven önce gelir":"Security comes first","Güvenli mi?":"Is it safe?",
-      "Sık sorulan sorular":"Frequently asked questions","Bilgisayarına bir bakım molası ver.":"Give your PC a maintenance break.",
-      "En son sürümü indir":"Download the latest release","Yaman Software ürünü":"A Yaman Software product",
-      "Ürün":"Product","Kaynaklar":"Resources","Özellikler":"Features","Nasıl çalışır?":"How it works",
-      "Güvenlik yaklaşımı":"Security","Son sürümü indir":"Download latest release","GitHub deposu":"GitHub repository",
-      "Sürüm geçmişi":"Release history","Dokümantasyon":"Documentation","MIT lisansı":"MIT License",
-      "Tüm hakları saklıdır.":"All rights reserved."
-    },
-    de: {
-      "Özellikler":"Funktionen","Nasıl çalışır?":"So funktioniert's","Güvenlik":"Sicherheit","SSS":"FAQ","İndir":"Herunterladen",
-      "Windows 10 / 11 · Ücretsiz · Açık kaynak":"Windows 10 / 11 · Kostenlos · Open Source",
-      "Ücretsiz indir":"Kostenlos herunterladen","Kaynak kodu":"Quellcode",
-      "Günlük temizlikten oyun performansına":"Von der täglichen Reinigung bis zur Gaming-Leistung",
-      "Her özellik aynı ilkeyle çalışır: önce gösterir, sonra sorar; değiştirdiği her ayarı geri alabilirsin.":"Jede Funktion folgt einem Prinzip: erst anzeigen, dann fragen – unterstützte Änderungen lassen sich rückgängig machen.",
-      "Üç adımda bakım":"Wartung in drei Schritten","Güven önce gelir":"Sicherheit steht an erster Stelle","Güvenli mi?":"Ist es sicher?",
-      "Sık sorulan sorular":"Häufig gestellte Fragen","Bilgisayarına bir bakım molası ver.":"Gönn deinem PC eine Wartungspause.",
-      "En son sürümü indir":"Neueste Version herunterladen","Yaman Software ürünü":"Ein Produkt von Yaman Software",
-      "Ürün":"Produkt","Kaynaklar":"Ressourcen","Güvenlik yaklaşımı":"Sicherheitskonzept",
-      "GitHub deposu":"GitHub-Repository","Sürüm geçmişi":"Versionsverlauf","Dokümantasyon":"Dokumentation","MIT lisansı":"MIT-Lizenz",
-      "Tüm hakları saklıdır.":"Alle Rechte vorbehalten."
-    },
-    fr: {
-      "Özellikler":"Fonctionnalités","Nasıl çalışır?":"Comment ça marche ?","Güvenlik":"Sécurité","SSS":"FAQ","İndir":"Télécharger",
-      "Windows 10 / 11 · Ücretsiz · Açık kaynak":"Windows 10 / 11 · Gratuit · Open source",
-      "Ücretsiz indir":"Télécharger gratuitement","Kaynak kodu":"Code source",
-      "Günlük temizlikten oyun performansına":"Du nettoyage quotidien aux performances de jeu",
-      "Her özellik aynı ilkeyle çalışır: önce gösterir, sonra sorar; değiştirdiği her ayarı geri alabilirsin.":"Chaque fonction suit le même principe : afficher d'abord, demander ensuite et permettre l'annulation des changements pris en charge.",
-      "Üç adımda bakım":"L'entretien en trois étapes","Güven önce gelir":"La sécurité avant tout","Güvenli mi?":"Est-ce sûr ?",
-      "Sık sorulan sorular":"Questions fréquentes","Bilgisayarına bir bakım molası ver.":"Offrez une pause entretien à votre PC.",
-      "En son sürümü indir":"Télécharger la dernière version","Yaman Software ürünü":"Un produit Yaman Software",
-      "Ürün":"Produit","Kaynaklar":"Ressources","Güvenlik yaklaşımı":"Sécurité",
-      "GitHub deposu":"Dépôt GitHub","Sürüm geçmişi":"Historique des versions","Dokümantasyon":"Documentation","MIT lisansı":"Licence MIT",
-      "Tüm hakları saklıdır.":"Tous droits réservés."
-    }
+  const common = {
+    "Özellikler":"Features","Nasıl çalışır?":"How it works","Güvenlik":"Security","SSS":"FAQ","İndir":"Download",
+    "Windows 10 / 11 · Ücretsiz · Açık kaynak":"Windows 10 / 11 · Free · Open source",
+    "Bilgisayarın için":"Your PC deserves a","sakin, hızlı":"calm, fast","bir bakım merkezi.":"care experience.",
+    "RAM'i boşaltır, gereksiz dosyaları temizler, “bellek yetersiz” hatasının sebebini bulur ve oyunlarda takılmayı azaltan ayarları tek yerde toplar. Kurulum yok: tek bir":"Frees RAM, removes junk files, helps diagnose low-memory warnings and brings gaming-focused settings together. No installer: just one",
+    "Ücretsiz indir":"Download free","Kaynak kodu":"Source code","İndirdiğin":"Place the downloaded","dosyasını bir klasöre koyup çalıştır. SmartScreen uyarısı çıkarsa:":"file in a folder and run it. If SmartScreen appears:","Ek bilgi → Yine de çalıştır":"More info → Run anyway",
+    "Telemetri yok":"No telemetry","Geri alınabilir ayarlar":"Reversible settings","İmzalı güncelleme":"Signed updates","Türkçe arayüz":"Turkish interface",
+    "Genel Bakış":"Overview","Otomatik optimize":"Auto optimize","Sistem durumu":"System status","öneri hazır":"recommendations ready","Hiçbir şey kendiliğinden değişmez.":"Nothing changes automatically.","DİSK":"DISK","İŞLEMCİ":"CPU","SANAL BELLEK":"VIRTUAL MEMORY","İyi":"Good","boş":"free",
+    "Uygulamadan görüntüler":"Screenshots","Arayüzü yakından tanı":"Take a closer look","Yaman PC Cleaner'ın gerçek uygulama önizlemeleri. Temel araçları tek bir masaüstü deneyiminde bir araya getirir.":"Real application previews of Yaman PC Cleaner, bringing essential tools together in one desktop experience.",
+    "Uygulama önizlemesi":"Application preview","Yaman PC Cleaner arayüzü":"Yaman PC Cleaner interface","Sistem araçlarından görünüm":"A look at system tools","Bakım deneyiminden görünüm":"A look at the maintenance experience","Görüntüleri büyütmek için üzerlerine tıklayabilirsin.":"Select an image to view it at full size.",
+    "Tek program, tam bakım":"One app, complete care","Günlük temizlikten oyun performansına":"From everyday cleanup to gaming performance","Her özellik aynı ilkeyle çalışır: önce gösterir, sonra sorar; değiştirdiği her ayarı geri alabilirsin.":"Every feature follows one principle: show first, ask before changing, and let you undo supported changes.",
+    "Sistem durumu":"System health","Açılınca 100 üzerinden puan; sanal bellek, boş yer, disk ve pil sağlığı, açılış yükü, sürücü ve çökmeler için tek tıkla düzeltme.":"A score out of 100, with one-click paths for virtual memory, free space, disk and battery health, startup load, drivers and crashes.",
+    "Sistemi optimize et":"Optimize system","Tek tıkla arka plan programlarını kapatır, RAM'i boşaltır, geçici dosyaları siler; sonunda ne kazandığını sayarak söyler.":"Closes selected background apps, frees RAM and removes temporary files, then reports the results.",
+    "Sistem izleyici":"System monitor","İşlemci, ekran kartı, RAM, VRAM, sanal bellek ve ısıyı son 2 dakikanın canlı grafiğiyle gösterir.":"Live charts for CPU, GPU, RAM, VRAM, virtual memory and temperatures over the last two minutes.",
+    "Disk temizliği":"Disk cleanup","Geçici dosyalar, tarayıcı ve oyun önbellekleri, Windows kalıntıları; hangi klasörün ne kadar yer tuttuğunu gösteren analiz.":"Cleans temporary files, browser and game caches, and Windows leftovers; storage analysis shows folder sizes.",
+    "Turbo modu":"Turbo mode","Oyunlarda takılmayı azaltan geri alınabilir ayarlar, oyun açılınca güç modunu yükselten profil ve donanım kontrolü.":"Reversible settings to reduce stutter, a gaming profile that raises power mode, and hardware checks.",
+    "Kişisel bakım":"Personal care","Haftalık bakım planı, sistem puanı ve kazanç özeti, yerel işlem günlüğü, geri yükleme noktası ve HTML bakım raporu.":"Weekly maintenance plan, system score and savings summary, local activity log, restore point and HTML report.",
+    "Bellek bekçisi":"Memory guardian","Saatin yanında çalışır; bellek dolmak üzereyken haber verir. Oyunda bile çalışan RAM boşaltma kısayolu.":"Runs in the system tray, warns when memory is running low and provides a RAM shortcut—even while gaming.",
+    "Windows bakımı":"Windows maintenance","Telemetri ve reklamlar için geri alınabilir ayarlar, hazır uygulamaları kaldırma, DNS seçimi ve ağ testi.":"Reversible privacy settings, removal of built-in apps, DNS selection and network tests.",
+    "Sürücü merkezi":"Driver center","NVIDIA sürücüsünün yeni sürümünü denetler; imzasını doğrular ve geri yükleme noktası oluşturarak kurar.":"Checks for NVIDIA driver updates, verifies signatures and creates a restore point before installation.",
+    "Sade akış":"A simple process","Üç adımda bakım":"Maintenance in three steps","Karmaşık ayar ekranları yok. Program ne yaptığını sade bir dille söyler.":"No complicated settings. The app explains what it does in plain language.",
+    "Durumu gör":"See your status","Genel Bakış açılınca bilgisayarının puanını ve dikkat isteyen noktaları gösterir. Hiçbir şeyi kendiliğinden değiştirmez.":"Overview shows your PC score and items that need attention. Nothing is changed automatically.",
+    "Düzelt":"Take action","Her önerinin yanındaki düğme ilgili yere götürür. Otomatik optimize yalnızca risksiz işleri yapar; Full optimize seçenekleri sana bırakır.":"Each recommendation links to the relevant action. Auto optimize handles only low-risk tasks; full optimization stays under your control.",
+    "Rahat bırak":"Let it run","Pencereyi kapatsan da tepside çalışmaya devam eder; bellek dolarsa haber verir. İstediğin an tamamen kapatabilirsin.":"It can keep running in the tray after the window closes and notify you when memory is low. You can exit it at any time.",
+    "Güven önce gelir":"Security comes first","Güvenli mi?":"Is it safe?","Kaynak kodu açık; ne yaptığını okuyabilir, kendin derleyebilirsin. Program seni izlemez, veri göndermez.":"The source is open for inspection and self-building. The app does not track you or send personal data.",
+    "Kaynak kodunu incele":"Inspect the source code","Açık kaynak:":"Open source:","bütün kod GitHub'da; gizli bileşen yok.":"all code is on GitHub; no hidden components.",
+    "Kendiliğinden önemli iş yapmaz:":"No critical actions on its own:","kapatma, silme, ayar ve sürücü işlemleri yalnızca sen basınca çalışır.":"app-closing, deletion, settings and driver actions run only when you request them.",
+    "Geri alınabilir:":"Reversible:","Windows, DNS ve sanal bellek ayarları değişmeden önce yedeklenir.":"Windows, DNS and virtual memory settings are backed up before changes.",
+    "Veri toplamaz:":"No data collection:","telemetri yok. İnternete yalnızca güncelleme, sürücü ve ağ testi için çıkar.":"no telemetry. Internet access is used only for updates, drivers and network tests.",
+    "İmzalı güncellemeler:":"Signed updates:","yeni sürüm, yazarın dijital imzası doğrulanmadan kurulmaz.":"new releases are not installed until the author's digital signature is verified.",
+    "Merak edilenler":"Good to know","Sık sorulan sorular":"Frequently asked questions",
+    "Yaman PC Cleaner ücretsiz mi?":"Is Yaman PC Cleaner free?","Evet. Tamamen ücretsiz ve açık kaynaktır (MIT lisansı); reklam ya da gizli ücret yoktur.":"Yes. It is free and open source under the MIT license, with no ads or hidden fees.",
+    "“Bellek yetersiz” hatasını çözer mi?":"Can it fix “out of memory” errors?","Bu hata çoğunlukla sanal belleğin (RAM + sayfa dosyası) dolmasından kaynaklanır. Program sanal belleğin ne kadar dolu olduğunu gösterir, en çok bellek kullanan programı söyler ve sayfa dosyasını RAM'ine uygun boyuta getiren geri alınabilir bir ayar sunar.":"This error often occurs when virtual memory (RAM plus paging file) is exhausted. The app shows usage, identifies memory-heavy processes and offers a reversible paging-file setting based on your RAM.",
+    "Oyunlarda FPS artırır mı?":"Can it increase gaming FPS?","Turbo sekmesi, oyunlarda takılmayı azaltan ve bazı oyunlarda FPS'i artıran, Microsoft'un da önerdiği ayarları bir arada sunar. Sonuç donanıma ve oyuna göre değişir; işe yaramadığı bilinen “efsane” ayarlar bilerek eklenmemiştir.":"Turbo groups settings that may reduce stutter and improve FPS in some games. Results depend on hardware and the game; ineffective myths are deliberately excluded.",
+    "Hangi Windows sürümlerinde çalışır?":"Which Windows versions are supported?","Windows 10 ve Windows 11. Ek bir program ya da kurulum gerekmez; .NET Framework Windows ile birlikte gelir.":"Windows 10 and Windows 11. No separate installer is required; .NET Framework is included with Windows.",
+    "Yönetici izni gerekiyor mu?":"Does it require administrator access?","Program normalde yönetici olmadan çalışır. Yalnızca sanal bellek, Windows kalıntıları, sürücü kurulumu ve makine geneli ağ ayarları gibi işler için Windows o an izin ister.":"The app normally runs without administrator rights. Windows requests permission only for tasks such as virtual memory, Windows cleanup, driver installation and system-wide network settings.",
+    "Bilgisayarına bir bakım molası ver.":"Give your PC a maintenance break.","Kurulum yok, reklam yok, telemetri yok. Tek bir exe.":"No installer, ads or telemetry. Just one EXE.",
+    "Yaman Software ürünü":"A Yaman Software product","Windows bilgisayarlar için sade, şeffaf ve kullanıcı kontrolünü merkeze alan bakım deneyimi. Ücretsiz, açık kaynak ve Türkçe.":"A straightforward, transparent PC maintenance experience that puts you in control. Free and open source.",
+    "Ürün":"Product","Kaynaklar":"Resources","Güvenlik yaklaşımı":"Security","Son sürümü indir":"Download latest release","GitHub deposu":"GitHub repository","Sürüm geçmişi":"Release history","Dokümantasyon":"Documentation","MIT lisansı":"MIT License","Tüm hakları saklıdır.":"All rights reserved."
   };
+  const translations = { en: common, de: {
+    "Özellikler":"Funktionen","Nasıl çalışır?":"So funktioniert's","Güvenlik":"Sicherheit","SSS":"FAQ","İndir":"Herunterladen",
+    "Windows 10 / 11 · Ücretsiz · Açık kaynak":"Windows 10 / 11 · Kostenlos · Open Source",
+    "Ücretsiz indir":"Kostenlos herunterladen","Kaynak kodu":"Quellcode","Günlük temizlikten oyun performansına":"Von der täglichen Reinigung bis zur Gaming-Leistung",
+    "Her özellik aynı ilkeyle çalışır: önce gösterir, sonra sorar; değiştirdiği her ayarı geri alabilirsin.":"Jede Funktion folgt einem Prinzip: erst anzeigen, dann fragen – unterstützte Änderungen lassen sich rückgängig machen.",
+    "Üç adımda bakım":"Wartung in drei Schritten","Güven önce gelir":"Sicherheit steht an erster Stelle","Güvenli mi?":"Ist es sicher?",
+    "Sık sorulan sorular":"Häufig gestellte Fragen","Bilgisayarına bir bakım molası ver.":"Gönn deinem PC eine Wartungspause.",
+    "En son sürümü indir":"Neueste Version herunterladen","Yaman Software ürünü":"Ein Produkt von Yaman Software","Ürün":"Produkt","Kaynaklar":"Ressourcen",
+    "Güvenlik yaklaşımı":"Sicherheitskonzept","GitHub deposu":"GitHub-Repository","Sürüm geçmişi":"Versionsverlauf","Dokümantasyon":"Dokumentation","MIT lisansı":"MIT-Lizenz","Tüm hakları saklıdır.":"Alle Rechte vorbehalten."
+  }, fr: {
+    "Özellikler":"Fonctionnalités","Nasıl çalışır?":"Comment ça marche ?","Güvenlik":"Sécurité","SSS":"FAQ","İndir":"Télécharger",
+    "Windows 10 / 11 · Ücretsiz · Açık kaynak":"Windows 10 / 11 · Gratuit · Open source",
+    "Ücretsiz indir":"Télécharger gratuitement","Kaynak kodu":"Code source","Günlük temizlikten oyun performansına":"Du nettoyage quotidien aux performances de jeu",
+    "Her özellik aynı ilkeyle çalışır: önce gösterir, sonra sorar; değiştirdiği her ayarı geri alabilirsin.":"Chaque fonction suit le même principe : afficher d'abord, demander ensuite et permettre l'annulation des changements pris en charge.",
+    "Üç adımda bakım":"L'entretien en trois étapes","Güven önce gelir":"La sécurité avant tout","Güvenli mi?":"Est-ce sûr ?",
+    "Sık sorulan sorular":"Questions fréquentes","Bilgisayarına bir bakım molası ver.":"Offrez une pause entretien à votre PC.",
+    "En son sürümü indir":"Télécharger la dernière version","Yaman Software ürünü":"Un produit Yaman Software","Ürün":"Produit","Kaynaklar":"Ressources",
+    "Güvenlik yaklaşımı":"Sécurité","GitHub deposu":"Dépôt GitHub","Sürüm geçmişi":"Historique des versions","Dokümantasyon":"Documentation","MIT lisansı":"Licence MIT","Tüm hakları saklıdır.":"Tous droits réservés."
+  }};
   const selector = document.getElementById('language-select');
   if (!selector) return;
   function applyLanguage(lang) {
