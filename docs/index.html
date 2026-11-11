@@ -7,7 +7,7 @@
 <title>Yaman PC Cleaner – Ücretsiz PC Temizleme ve Hızlandırma Programı (Windows 10/11)</title>
 <meta name="description" content="Yaman PC Cleaner: Windows 10 ve 11 için ücretsiz, açık kaynak, Türkçe PC temizleme ve hızlandırma programı. RAM temizleyici, gereksiz dosya temizliği, bellek yetersiz hatası çözümü, oyunda FPS artırma ve takılma azaltma.">
 <meta name="keywords" content="pc temizleme programı, bilgisayar hızlandırma, ram temizleyici, ram boşaltma, fps artırma, oyun performansı, bellek yetersiz hatası, sanal bellek, disk temizleme, windows 11 optimizasyon, ücretsiz, türkçe, açık kaynak">
-<meta name="author" content="Yaman">
+<meta name="author" content="Yaman Software">
 <link rel="canonical" href="https://myozan.github.io/YamanPcCleaner/">
 <link rel="icon" href="logo.png" type="image/png">
 <meta property="og:type" content="website">
@@ -29,7 +29,7 @@
   "url": "https://myozan.github.io/YamanPcCleaner/",
   "downloadUrl": "https://github.com/Myozan/YamanPcCleaner/releases/latest",
   "license": "https://opensource.org/licenses/MIT",
-  "author": { "@type": "Person", "name": "Yaman" },
+  "author": { "@type": "Organization", "name": "Yaman Software" },
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
 }
 </script>
@@ -172,11 +172,25 @@
     border:1px solid rgba(59,130,246,.35); background:linear-gradient(120deg, rgba(59,130,246,.16), rgba(34,211,238,.07)); }
   .cagri h2 { margin:0 0 4px; font-size:1.5rem; }
   .cagri p { margin:0; color:var(--soluk); }
-  footer { border-top:1px solid var(--cizgi); padding:26px 0 40px; color:var(--soluk); font-size:.87rem; }
-  .alt-satir { display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; }
-  .alt-satir .sol { display:flex; align-items:center; gap:10px; }
-  .alt-satir img { width:26px; height:26px; border-radius:7px; }
-  .baglar { display:flex; gap:18px; }
+  footer { border-top:1px solid var(--cizgi); padding:42px 0 24px; color:var(--soluk); font-size:.87rem; background:rgba(4,9,17,.42); }
+  .footer-grid { display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:34px; padding-bottom:30px; }
+  .footer-brand { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+  .footer-brand img { width:42px; height:42px; border-radius:12px; box-shadow:0 8px 22px rgba(59,130,246,.22); }
+  .footer-brand strong { display:block; color:var(--yazi); font-size:1rem; letter-spacing:.02em; }
+  .footer-brand small { display:block; color:var(--vurgu-acik); font-size:.68rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; }
+  .footer-aciklama { max-width:390px; margin:0; color:var(--soluk); line-height:1.75; }
+  .footer-baslik { color:var(--yazi); font-size:.78rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; margin:4px 0 13px; }
+  .footer-linkler { display:grid; gap:9px; }
+  .footer-linkler a { color:var(--soluk); width:max-content; }
+  .footer-linkler a:hover { color:#fff; }
+  .footer-alt { display:flex; flex-wrap:wrap; gap:12px 20px; align-items:center; justify-content:space-between; border-top:1px solid var(--cizgi); padding-top:18px; }
+  .footer-alt strong { color:var(--yazi); }
+  .footer-imza { color:#7186a4; font-size:.78rem; letter-spacing:.04em; }
+  @media (max-width: 620px) {
+    .footer-grid { grid-template-columns:1fr 1fr; gap:24px 18px; }
+    .footer-grid > div:first-child { grid-column:1 / -1; }
+    .footer-alt { align-items:flex-start; flex-direction:column; }
+  }
 
   @media (max-width: 900px) {
     .kahraman { grid-template-columns:1fr; padding-top:30px; }
@@ -345,12 +359,37 @@
 </main>
 
 <footer>
-  <div class="kap alt-satir">
-    <div class="sol"><img src="logo.png" alt=""> <span>Yaman PC Cleaner · MIT lisansı</span></div>
-    <div class="baglar">
-      <a href="https://github.com/Myozan/YamanPcCleaner">GitHub</a>
-      <a href="https://github.com/Myozan/YamanPcCleaner/releases">Sürümler</a>
-      <a href="https://github.com/Myozan/YamanPcCleaner/blob/main/LICENSE">Lisans</a>
+  <div class="kap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="logo.png" alt="Yaman PC Cleaner logosu" width="42" height="42">
+          <div><strong>YAMAN PC CLEANER</strong><small>Yaman Software ürünü</small></div>
+        </div>
+        <p class="footer-aciklama">Windows bilgisayarlar için sade, şeffaf ve kullanıcı kontrolünü merkeze alan bakım deneyimi. Ücretsiz, açık kaynak ve Türkçe.</p>
+      </div>
+      <div>
+        <h2 class="footer-baslik">Ürün</h2>
+        <nav class="footer-linkler" aria-label="Ürün bağlantıları">
+          <a href="#ozellikler">Özellikler</a>
+          <a href="#nasil">Nasıl çalışır?</a>
+          <a href="#guvenlik">Güvenlik yaklaşımı</a>
+          <a href="https://github.com/Myozan/YamanPcCleaner/releases/latest">Son sürümü indir</a>
+        </nav>
+      </div>
+      <div>
+        <h2 class="footer-baslik">Kaynaklar</h2>
+        <nav class="footer-linkler" aria-label="Kaynak bağlantıları">
+          <a href="https://github.com/Myozan/YamanPcCleaner">GitHub deposu</a>
+          <a href="https://github.com/Myozan/YamanPcCleaner/releases">Sürüm geçmişi</a>
+          <a href="https://github.com/Myozan/YamanPcCleaner/blob/main/README.md">Dokümantasyon</a>
+          <a href="https://github.com/Myozan/YamanPcCleaner/blob/main/LICENSE">MIT lisansı</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-alt">
+      <span>© 2026 <strong>Yaman Software</strong>. Tüm hakları saklıdır.</span>
+      <span class="footer-imza">Technology · Innovation · Software</span>
     </div>
   </div>
 </footer>
