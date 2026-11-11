@@ -522,7 +522,8 @@
   }
   selector.addEventListener('change', () => applyLanguage(selector.value));
   let saved = 'tr';
-  try { saved = localStorage.getItem('ypc-language') || 'tr'; } catch (_) {}
+  try { saved = new URLSearchParams(window.location.search).get('lang') || localStorage.getItem('ypc-language') || 'tr'; } catch (_) {}
+  if (!['tr','en','de','fr'].includes(saved)) saved = 'tr';
   selector.value = saved;
   if (saved !== 'tr') applyLanguage(saved);
 })();
