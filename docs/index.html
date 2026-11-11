@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="GBo6cp2iYpyuakVDQSDUIavAxETJa2tGxwe-cdzEDeU" />
+<title>Yaman PC Cleaner – Ücretsiz PC Temizleme ve Hızlandırma Programı (Windows 10/11)</title>
+<meta name="description" content="Yaman PC Cleaner: Windows 10 ve 11 için ücretsiz, açık kaynak, Türkçe PC temizleme ve hızlandırma programı. RAM temizleyici, gereksiz dosya temizliği, bellek yetersiz hatası çözümü, oyunda FPS artırma ve takılma azaltma.">
+<meta name="keywords" content="pc temizleme programı, bilgisayar hızlandırma, ram temizleyici, ram boşaltma, fps artırma, oyun performansı, bellek yetersiz hatası, sanal bellek, disk temizleme, windows 11 optimizasyon, ücretsiz, türkçe, açık kaynak">
+<meta name="author" content="Yaman">
+<link rel="canonical" href="https://myozan.github.io/YamanPcCleaner/">
+<link rel="icon" href="logo.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Yaman PC Cleaner – Ücretsiz PC Temizleme ve Hızlandırma Programı">
+<meta property="og:description" content="Windows 10/11 için ücretsiz, açık kaynak, Türkçe PC temizleme ve hızlandırma programı: RAM temizleyici, disk temizliği, oyun için FPS ayarları.">
+<meta property="og:url" content="https://myozan.github.io/YamanPcCleaner/">
+<meta property="og:image" content="https://myozan.github.io/YamanPcCleaner/logo.png">
+<meta name="theme-color" content="#070d18">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Yaman PC Cleaner",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "UtilitiesApplication",
+  "inLanguage": "tr",
+  "description": "Windows için ücretsiz, açık kaynak, Türkçe PC temizleme ve hızlandırma programı: RAM temizleyici, gereksiz dosya temizliği, oyun için FPS ve takılma ayarları.",
+  "url": "https://myozan.github.io/YamanPcCleaner/",
+  "downloadUrl": "https://github.com/Myozan/YamanPcCleaner/releases/latest",
+  "license": "https://opensource.org/licenses/MIT",
+  "author": { "@type": "Person", "name": "Yaman" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Yaman PC Cleaner ücretsiz mi?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Evet. Tamamen ücretsiz ve açık kaynaktır (MIT lisansı); reklam ya da gizli ücret yoktur." } },
+    { "@type": "Question", "name": "\"Bellek yetersiz\" hatasını çözer mi?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Program sanal belleğin (RAM + sayfa dosyası) ne kadar dolu olduğunu gösterir, en çok bellek kullanan programı söyler ve sayfa dosyasını RAM'ine uygun boyuta getiren geri alınabilir bir ayar sunar. Bu hata çoğunlukla sanal belleğin dolmasından kaynaklanır." } },
+    { "@type": "Question", "name": "Oyunlarda FPS artırır mı?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Turbo sekmesi oyunlarda takılmayı azaltan ve bazı oyunlarda FPS'i artıran, Microsoft'un da önerdiği geri alınabilir Windows ayarlarını bir arada sunar. Sonuç donanıma ve oyuna göre değişir; işe yaramadığı bilinen efsane ayarlar bilerek eklenmemiştir." } },
+    { "@type": "Question", "name": "Güvenli mi, virüs var mı?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Kaynak kodu GitHub'da herkese açıktır. Program kişisel veri toplamaz, ayarları değiştirmeden önce eski değerleri yedekler ve güncellemeleri yazarın dijital imzasıyla doğrulamadan kurmaz." } }
+  ]
+}
+</script>
+<style>
+  :root {
+    --zemin:#070d18; --zemin2:#0a1424; --panel:#0f1a2c; --panel-ust:#15243b; --cizgi:#22344f;
+    --yazi:#eaf1fb; --soluk:#93a7c4; --vurgu:#3b82f6; --vurgu-acik:#60a5fa; --camgobegi:#22d3ee;
+    --yesil:#34d399; --amber:#f5a524; --kirmizi:#f05252; --yaricap:16px;
+    --golge:0 24px 70px rgba(0,0,0,.45);
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; color:var(--yazi); font:16px/1.65 "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    background:
+      radial-gradient(1100px 540px at 78% -8%, rgba(59,130,246,.20), transparent 66%),
+      radial-gradient(900px 500px at -10% 24%, rgba(34,211,238,.10), transparent 62%),
+      linear-gradient(180deg, var(--zemin) 0%, var(--zemin2) 100%);
+    background-attachment:fixed;
+  }
+  a { color:var(--vurgu-acik); text-decoration:none; }
+  a:hover { color:#fff; }
+  .kap { width:min(1120px, 100% - 40px); margin:0 auto; }
+  header { padding:22px 0; }
+  .ust { display:flex; align-items:center; gap:12px; }
+  .ust img { width:40px; height:40px; border-radius:11px; box-shadow:0 8px 22px rgba(59,130,246,.28); }
+  .marka { font-weight:700; letter-spacing:.2px; }
+  .marka span { color:var(--vurgu-acik); }
+  .menu { margin-left:auto; display:flex; gap:22px; align-items:center; font-size:.92rem; color:var(--soluk); }
+  .menu a { color:var(--soluk); }
+  .menu a:hover { color:#fff; }
+  .menu .cta { color:#fff; background:var(--vurgu); padding:9px 16px; border-radius:10px; font-weight:600; }
+
+  .kahraman { display:grid; grid-template-columns:1.08fr .92fr; gap:44px; align-items:center; padding:46px 0 30px; }
+  .rozet { display:inline-flex; align-items:center; gap:8px; padding:7px 12px; border:1px solid var(--cizgi);
+    background:rgba(21,36,59,.72); border-radius:999px; color:var(--soluk); font-size:.82rem; font-weight:600; letter-spacing:.2px; }
+  .nokta { width:7px; height:7px; border-radius:50%; background:var(--yesil); box-shadow:0 0 0 4px rgba(52,211,153,.13); }
+  h1 { font-size:clamp(2.15rem, 4.6vw, 3.5rem); line-height:1.08; letter-spacing:-.03em; margin:18px 0 14px; }
+  h1 .vurgu { background:linear-gradient(100deg, var(--vurgu-acik), var(--camgobegi)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .giris { color:var(--soluk); font-size:1.06rem; max-width:560px; margin:0 0 26px; }
+  .dugmeler { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+  .dugme { display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:13px 22px; border-radius:12px;
+    font-weight:700; border:1px solid transparent; transition:transform .16s ease, filter .16s ease, border-color .16s ease; }
+  .dugme:hover { transform:translateY(-1px); filter:brightness(1.08); }
+  .ana { background:linear-gradient(135deg, var(--vurgu), #2563eb); color:#fff; box-shadow:0 14px 30px rgba(59,130,246,.28); }
+  .ikinci { background:rgba(15,26,44,.78); color:var(--yazi); border-color:var(--cizgi); }
+  .kucuk-not { color:var(--soluk); font-size:.85rem; margin-top:12px; }
+  .kucuk-not code { color:#cfe2ff; background:rgba(59,130,246,.12); padding:2px 6px; border-radius:6px; }
+
+  .guven { display:flex; flex-wrap:wrap; gap:10px 22px; margin:26px 0 0; padding:16px 0 0; border-top:1px solid var(--cizgi); color:var(--soluk); font-size:.87rem; }
+  .guven span { display:inline-flex; align-items:center; gap:8px; }
+  .tik { color:var(--yesil); font-weight:800; }
+
+  /* Uygulama penceresi maketi */
+  .maket { position:relative; filter:drop-shadow(var(--golge)); }
+  .pencere { border:1px solid var(--cizgi); border-radius:18px; overflow:hidden; background:var(--zemin2); }
+  .pencere-ust { height:34px; display:flex; align-items:center; gap:6px; padding:0 14px; background:#0b1524; border-bottom:1px solid var(--cizgi); }
+  .top-nokta { width:9px; height:9px; border-radius:50%; background:#31415c; }
+  .pencere-govde { display:grid; grid-template-columns:132px 1fr; min-height:318px; }
+  .maket-yan { padding:14px 12px; background:linear-gradient(180deg, #0d1829, #0a1422); border-right:1px solid var(--cizgi); }
+  .maket-marka { display:flex; align-items:center; gap:8px; margin-bottom:18px; }
+  .maket-marka img { width:26px; height:26px; border-radius:7px; }
+  .maket-marka b { font-size:.72rem; letter-spacing:.12em; }
+  .maket-yan i { display:block; height:8px; border-radius:5px; background:#1b2c44; margin:0 0 11px; }
+  .maket-yan i.secili { background:linear-gradient(90deg, rgba(59,130,246,.45), rgba(59,130,246,.12)); width:92%; }
+  .maket-ana { padding:18px; }
+  .maket-baslik { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
+  .maket-baslik b { font-size:.9rem; }
+  .maket-baslik span { font-size:.62rem; color:#dbeafe; background:var(--vurgu); padding:5px 9px; border-radius:7px; font-weight:700; }
+  .maket-izgara { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .maket-kart { background:var(--panel); border:1px solid var(--cizgi); border-radius:10px; padding:10px; }
+  .maket-kart small { color:var(--soluk); font-size:.58rem; font-weight:700; letter-spacing:.08em; }
+  .maket-kart strong { display:block; font-size:1.08rem; margin:2px 0 7px; }
+  .cubuk { height:5px; border-radius:4px; background:#1c2c45; overflow:hidden; }
+  .cubuk i { display:block; height:100%; border-radius:4px; background:linear-gradient(90deg, var(--vurgu), var(--camgobegi)); }
+  .maket-puan { display:flex; align-items:center; gap:14px; margin-bottom:10px; }
+  .halka { width:88px; height:88px; border-radius:50%; display:grid; place-items:center; flex:none;
+    background:conic-gradient(var(--vurgu) 0 78%, #1b2c44 78% 100%); position:relative; }
+  .halka::after { content:""; position:absolute; inset:9px; border-radius:50%; background:var(--zemin2); }
+  .halka b { position:relative; z-index:1; font-size:1.35rem; }
+  .maket-puan p { margin:0; color:var(--soluk); font-size:.7rem; line-height:1.5; }
+  .maket-puan p b { color:var(--yazi); display:block; font-size:.78rem; margin-bottom:2px; }
+  .parilti { position:absolute; inset:auto -18px -26px auto; width:190px; height:190px; background:radial-gradient(circle, rgba(34,211,238,.20), transparent 70%); filter:blur(8px); pointer-events:none; }
+
+  section { padding:54px 0; }
+  .bolum-baslik { max-width:720px; margin:0 0 26px; }
+  .bolum-baslik .etiket { color:var(--vurgu-acik); font-size:.75rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+  .bolum-baslik h2 { font-size:clamp(1.55rem, 3vw, 2.15rem); letter-spacing:-.02em; margin:8px 0 8px; }
+  .bolum-baslik p { color:var(--soluk); margin:0; }
+  .izgara { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; }
+  .kart { background:linear-gradient(180deg, rgba(21,36,59,.78), rgba(15,26,44,.78)); border:1px solid var(--cizgi);
+    border-radius:var(--yaricap); padding:20px; transition:transform .18s ease, border-color .18s ease; }
+  .kart:hover { transform:translateY(-2px); border-color:#35517a; }
+  .simge { width:38px; height:38px; border-radius:11px; display:grid; place-items:center; font-size:1.05rem;
+    background:linear-gradient(135deg, rgba(59,130,246,.22), rgba(34,211,238,.10)); border:1px solid rgba(59,130,246,.35); margin-bottom:14px; }
+  .kart h3 { font-size:1rem; margin:0 0 6px; }
+  .kart p { color:var(--soluk); font-size:.9rem; margin:0; }
+  .adimlar { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; counter-reset:adim; }
+  .adim { position:relative; padding:22px 20px 20px; border:1px solid var(--cizgi); border-radius:var(--yaricap); background:rgba(15,26,44,.62); }
+  .adim::before { counter-increment:adim; content:counter(adim); display:grid; place-items:center; width:32px; height:32px;
+    border-radius:10px; background:var(--vurgu); color:#fff; font-weight:800; margin-bottom:14px; }
+  .adim h3 { margin:0 0 5px; font-size:1rem; }
+  .adim p { margin:0; color:var(--soluk); font-size:.9rem; }
+
+  .guvenlik { display:grid; grid-template-columns:.95fr 1.05fr; gap:26px; align-items:start; }
+  .guvenlik-kart { border:1px solid var(--cizgi); border-radius:var(--yaricap); padding:24px; background:linear-gradient(180deg, rgba(21,36,59,.8), rgba(15,26,44,.72)); }
+  .guvenlik-kart h2 { margin:0 0 8px; font-size:1.6rem; letter-spacing:-.02em; }
+  .guvenlik-kart > p { color:var(--soluk); margin:0 0 18px; }
+  .liste { list-style:none; padding:0; margin:0; display:grid; gap:12px; }
+  .liste li { display:flex; gap:11px; align-items:flex-start; color:var(--soluk); font-size:.93rem; }
+  .liste li b { color:var(--yazi); }
+  .rozet-tik { flex:none; width:22px; height:22px; border-radius:50%; display:grid; place-items:center; font-size:.68rem;
+    background:rgba(52,211,153,.14); color:var(--yesil); border:1px solid rgba(52,211,153,.32); font-weight:900; margin-top:2px; }
+
+  details { border:1px solid var(--cizgi); border-radius:12px; background:rgba(15,26,44,.62); padding:0 18px; margin-bottom:10px; }
+  details[open] { border-color:#35517a; }
+  summary { cursor:pointer; padding:15px 0; font-weight:650; list-style:none; display:flex; justify-content:space-between; gap:14px; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:"+"; color:var(--vurgu-acik); font-weight:800; }
+  details[open] summary::after { content:"–"; }
+  details p { margin:0; padding:0 0 16px; color:var(--soluk); font-size:.93rem; }
+
+  .cagri { display:flex; align-items:center; justify-content:space-between; gap:22px; padding:30px; border-radius:20px;
+    border:1px solid rgba(59,130,246,.35); background:linear-gradient(120deg, rgba(59,130,246,.16), rgba(34,211,238,.07)); }
+  .cagri h2 { margin:0 0 4px; font-size:1.5rem; }
+  .cagri p { margin:0; color:var(--soluk); }
+  footer { border-top:1px solid var(--cizgi); padding:26px 0 40px; color:var(--soluk); font-size:.87rem; }
+  .alt-satir { display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; }
+  .alt-satir .sol { display:flex; align-items:center; gap:10px; }
+  .alt-satir img { width:26px; height:26px; border-radius:7px; }
+  .baglar { display:flex; gap:18px; }
+
+  @media (max-width: 900px) {
+    .kahraman { grid-template-columns:1fr; padding-top:30px; }
+    .maket { max-width:560px; }
+    .izgara { grid-template-columns:repeat(2,1fr); }
+    .guvenlik { grid-template-columns:1fr; }
+    .menu { display:none; }
+  }
+  @media (max-width: 620px) {
+    .izgara, .adimlar { grid-template-columns:1fr; }
+    .cagri { flex-direction:column; align-items:flex-start; }
+    .pencere-govde { grid-template-columns:104px 1fr; }
+    .maket-izgara { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="kap ust">
+    <img src="logo.png" alt="Yaman PC Cleaner logosu" width="40" height="40">
+    <div class="marka">Yaman <span>PC Cleaner</span></div>
+    <nav class="menu" aria-label="Sayfa menüsü">
+      <a href="#ozellikler">Özellikler</a>
+      <a href="#nasil">Nasıl çalışır?</a>
+      <a href="#guvenlik">Güvenlik</a>
+      <a href="#sss">SSS</a>
+      <a class="cta" href="https://github.com/Myozan/YamanPcCleaner/releases/latest">İndir</a>
+    </nav>
+  </div>
+</header>
+
+<main class="kap">
+  <section class="kahraman" aria-labelledby="baslik">
+    <div>
+      <div class="rozet"><span class="nokta"></span> Windows 10 / 11 · Ücretsiz · Açık kaynak</div>
+      <h1 id="baslik">Bilgisayarın için <span class="vurgu">sakin, hızlı</span> bir bakım merkezi.</h1>
+      <p class="giris">RAM'i boşaltır, gereksiz dosyaları temizler, “bellek yetersiz” hatasının sebebini bulur ve oyunlarda takılmayı azaltan ayarları tek yerde toplar. Kurulum yok: tek bir <code>exe</code>.</p>
+      <div class="dugmeler">
+        <a class="dugme ana" href="https://github.com/Myozan/YamanPcCleaner/releases/latest">↓ Ücretsiz indir</a>
+        <a class="dugme ikinci" href="https://github.com/Myozan/YamanPcCleaner">Kaynak kodu</a>
+      </div>
+      <p class="kucuk-not">İndirdiğin <code>YamanPcCleaner.exe</code> dosyasını bir klasöre koyup çalıştır. SmartScreen uyarısı çıkarsa: <strong>Ek bilgi → Yine de çalıştır</strong>.</p>
+      <div class="guven">
+        <span><b class="tik">✓</b> Telemetri yok</span>
+        <span><b class="tik">✓</b> Geri alınabilir ayarlar</span>
+        <span><b class="tik">✓</b> İmzalı güncelleme</span>
+        <span><b class="tik">✓</b> Türkçe arayüz</span>
+      </div>
+    </div>
+
+    <div class="maket" aria-hidden="true">
+      <div class="pencere">
+        <div class="pencere-ust"><span class="top-nokta"></span><span class="top-nokta"></span><span class="top-nokta"></span></div>
+        <div class="pencere-govde">
+          <div class="maket-yan">
+            <div class="maket-marka"><img src="logo.png" alt=""><b>YAMAN</b></div>
+            <i class="secili"></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="maket-ana">
+            <div class="maket-baslik"><b>Genel Bakış</b><span>Otomatik optimize</span></div>
+            <div class="maket-puan">
+              <div class="halka"><b>78</b></div>
+              <p><b>Sistem durumu</b>3 öneri hazır<br>Hiçbir şey kendiliğinden değişmez.</p>
+            </div>
+            <div class="maket-izgara">
+              <div class="maket-kart"><small>RAM</small><strong>%62</strong><div class="cubuk"><i style="width:62%"></i></div></div>
+              <div class="maket-kart"><small>DİSK</small><strong>128 GB boş</strong><div class="cubuk"><i style="width:76%"></i></div></div>
+              <div class="maket-kart"><small>İŞLEMCİ</small><strong>%18</strong><div class="cubuk"><i style="width:18%"></i></div></div>
+              <div class="maket-kart"><small>SANAL BELLEK</small><strong>İyi</strong><div class="cubuk"><i style="width:44%"></i></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="parilti"></div>
+    </div>
+  </section>
+
+  <section id="ozellikler">
+    <div class="bolum-baslik">
+      <div class="etiket">Tek program, tam bakım</div>
+      <h2>Günlük temizlikten oyun performansına</h2>
+      <p>Her özellik aynı ilkeyle çalışır: önce gösterir, sonra sorar; değiştirdiği her ayarı geri alabilirsin.</p>
+    </div>
+    <div class="izgara">
+      <article class="kart"><div class="simge">◎</div><h3>Sistem durumu</h3><p>Açılınca 100 üzerinden puan; sanal bellek, boş yer, disk ve pil sağlığı, açılış yükü, sürücü ve çökmeler için tek tıkla düzeltme.</p></article>
+      <article class="kart"><div class="simge">▶</div><h3>Sistemi optimize et</h3><p>Tek tıkla arka plan programlarını kapatır, RAM'i boşaltır, geçici dosyaları siler; sonunda ne kazandığını sayarak söyler.</p></article>
+      <article class="kart"><div class="simge">◔</div><h3>Sistem izleyici</h3><p>İşlemci, ekran kartı, RAM, VRAM, sanal bellek ve ısıyı son 2 dakikanın canlı grafiğiyle gösterir.</p></article>
+      <article class="kart"><div class="simge">▤</div><h3>Disk temizliği</h3><p>Geçici dosyalar, tarayıcı ve oyun önbellekleri, Windows kalıntıları; hangi klasörün ne kadar yer tuttuğunu gösteren analiz.</p></article>
+      <article class="kart"><div class="simge">⚡</div><h3>Turbo modu</h3><p>Oyunlarda takılmayı azaltan geri alınabilir ayarlar, oyun açılınca güç modunu yükselten profil ve donanım kontrolü.</p></article>
+      <article class="kart"><div class="simge">♥</div><h3>Kişisel bakım</h3><p>Haftalık bakım planı, sistem puanı ve kazanç özeti, yerel işlem günlüğü, geri yükleme noktası ve HTML bakım raporu.</p></article>
+      <article class="kart"><div class="simge">◉</div><h3>Bellek bekçisi</h3><p>Saatin yanında çalışır; bellek dolmak üzereyken haber verir. Oyunda bile çalışan RAM boşaltma kısayolu.</p></article>
+      <article class="kart"><div class="simge">▣</div><h3>Windows bakımı</h3><p>Telemetri ve reklamlar için geri alınabilir ayarlar, hazır uygulamaları kaldırma, DNS seçimi ve ağ testi.</p></article>
+      <article class="kart"><div class="simge">↻</div><h3>Sürücü merkezi</h3><p>NVIDIA sürücüsünün yeni sürümünü denetler; imzasını doğrular ve geri yükleme noktası oluşturarak kurar.</p></article>
+    </div>
+  </section>
+
+  <section id="nasil">
+    <div class="bolum-baslik">
+      <div class="etiket">Sade akış</div>
+      <h2>Üç adımda bakım</h2>
+      <p>Karmaşık ayar ekranları yok. Program ne yaptığını sade bir dille söyler.</p>
+    </div>
+    <div class="adimlar">
+      <div class="adim"><h3>Durumu gör</h3><p>Genel Bakış açılınca bilgisayarının puanını ve dikkat isteyen noktaları gösterir. Hiçbir şeyi kendiliğinden değiştirmez.</p></div>
+      <div class="adim"><h3>Düzelt</h3><p>Her önerinin yanındaki düğme ilgili yere götürür. Otomatik optimize yalnızca risksiz işleri yapar; Full optimize seçenekleri sana bırakır.</p></div>
+      <div class="adim"><h3>Rahat bırak</h3><p>Pencereyi kapatsan da tepside çalışmaya devam eder; bellek dolarsa haber verir. İstediğin an tamamen kapatabilirsin.</p></div>
+    </div>
+  </section>
+
+  <section id="guvenlik">
+    <div class="guvenlik">
+      <div class="guvenlik-kart">
+        <div class="etiket" style="color:var(--vurgu-acik);font-size:.75rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase">Güven önce gelir</div>
+        <h2>Güvenli mi?</h2>
+        <p>Kaynak kodu açık; ne yaptığını okuyabilir, kendin derleyebilirsin. Program seni izlemez, veri göndermez.</p>
+        <a class="dugme ikinci" href="https://github.com/Myozan/YamanPcCleaner">Kaynak kodunu incele</a>
+      </div>
+      <div class="guvenlik-kart">
+        <ul class="liste">
+          <li><span class="rozet-tik">✓</span><span><b>Açık kaynak:</b> bütün kod GitHub'da; gizli bileşen yok.</span></li>
+          <li><span class="rozet-tik">✓</span><span><b>Kendiliğinden önemli iş yapmaz:</b> kapatma, silme, ayar ve sürücü işlemleri yalnızca sen basınca çalışır.</span></li>
+          <li><span class="rozet-tik">✓</span><span><b>Geri alınabilir:</b> Windows, DNS ve sanal bellek ayarları değişmeden önce yedeklenir.</span></li>
+          <li><span class="rozet-tik">✓</span><span><b>Veri toplamaz:</b> telemetri yok. İnternete yalnızca güncelleme, sürücü ve ağ testi için çıkar.</span></li>
+          <li><span class="rozet-tik">✓</span><span><b>İmzalı güncellemeler:</b> yeni sürüm, yazarın dijital imzası doğrulanmadan kurulmaz.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="sss">
+    <div class="bolum-baslik">
+      <div class="etiket">Merak edilenler</div>
+      <h2>Sık sorulan sorular</h2>
+    </div>
+    <details open>
+      <summary>Yaman PC Cleaner ücretsiz mi?</summary>
+      <p>Evet. Tamamen ücretsiz ve açık kaynaktır (MIT lisansı); reklam ya da gizli ücret yoktur.</p>
+    </details>
+    <details>
+      <summary>“Bellek yetersiz” hatasını çözer mi?</summary>
+      <p>Bu hata çoğunlukla sanal belleğin (RAM + sayfa dosyası) dolmasından kaynaklanır. Program sanal belleğin ne kadar dolu olduğunu gösterir, en çok bellek kullanan programı söyler ve sayfa dosyasını RAM'ine uygun boyuta getiren geri alınabilir bir ayar sunar.</p>
+    </details>
+    <details>
+      <summary>Oyunlarda FPS artırır mı?</summary>
+      <p>Turbo sekmesi, oyunlarda takılmayı azaltan ve bazı oyunlarda FPS'i artıran, Microsoft'un da önerdiği ayarları bir arada sunar. Sonuç donanıma ve oyuna göre değişir; işe yaramadığı bilinen “efsane” ayarlar bilerek eklenmemiştir.</p>
+    </details>
+    <details>
+      <summary>Hangi Windows sürümlerinde çalışır?</summary>
+      <p>Windows 10 ve Windows 11. Ek bir program ya da kurulum gerekmez; .NET Framework Windows ile birlikte gelir.</p>
+    </details>
+    <details>
+      <summary>Yönetici izni gerekiyor mu?</summary>
+      <p>Program normalde yönetici olmadan çalışır. Yalnızca sanal bellek, Windows kalıntıları, sürücü kurulumu ve makine geneli ağ ayarları gibi işler için Windows o an izin ister.</p>
+    </details>
+  </section>
+
+  <section>
+    <div class="cagri">
+      <div>
+        <h2>Bilgisayarına bir bakım molası ver.</h2>
+        <p>Kurulum yok, reklam yok, telemetri yok. Tek bir exe.</p>
+      </div>
+      <a class="dugme ana" href="https://github.com/Myozan/YamanPcCleaner/releases/latest">En son sürümü indir</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="kap alt-satir">
+    <div class="sol"><img src="logo.png" alt=""> <span>Yaman PC Cleaner · MIT lisansı</span></div>
+    <div class="baglar">
+      <a href="https://github.com/Myozan/YamanPcCleaner">GitHub</a>
+      <a href="https://github.com/Myozan/YamanPcCleaner/releases">Sürümler</a>
+      <a href="https://github.com/Myozan/YamanPcCleaner/blob/main/LICENSE">Lisans</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+name: Derle ve GitHub Release
+
+# Güncelleme kanalı GitHub Releases'tir. v1.3.0 gibi bir etiket push edilince
+# uygulama derlenir, gizli anahtarla imzalanır ve iki dosya release'e eklenir:
+# YamanPcCleaner.exe + YamanPcCleaner.exe.imza
+#
+# Gerekli repository secret: IMZA_GIZLI_ANAHTAR
+# İçeriği: Belgeler\YamanPcCleaner-imza\gizli-anahtar.xml dosyasının tamamı.
+# Bu secret yoksa iş akışı bilerek durur; imzasız güncelleme yayınlanmaz.
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  yayinla:
+    runs-on: windows-latest
+    steps:
+      - name: Kaynak kodu al
+        uses: actions/checkout@v4
+
+      - name: Derle
+        shell: cmd
+        run: derle.cmd
+
+      - name: Sürüm etiketi ile exe sürümünü karşılaştır
+        shell: pwsh
+        run: |
+          $dosya = (Get-Item .\YamanPcCleaner.exe).VersionInfo.FileVersion
+          $beklenen = $env:GITHUB_REF_NAME.TrimStart('v') + '.0'
+          if ($dosya -ne $beklenen) {
+            throw "Etiket ($env:GITHUB_REF_NAME) ile exe sürümü ($dosya) uyuşmuyor. src/Cekirdek/SurumBilgisi.cs içindeki Metin'i etiketle aynı yap."
+          }
+
+      - name: İmzala
+        shell: pwsh
+        env:
+          IMZA_ANAHTARI: ${{ secrets.IMZA_GIZLI_ANAHTAR }}
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:IMZA_ANAHTARI)) {
+            throw 'IMZA_GIZLI_ANAHTAR repository secret tanımlı değil. İmzasız release yayınlanmaz.'
+          }
+          $yol = Join-Path $env:RUNNER_TEMP 'gizli-anahtar.xml'
+          try {
+            [IO.File]::WriteAllText($yol, $env:IMZA_ANAHTARI, (New-Object System.Text.UTF8Encoding($false)))
+            .\araclar\imzala.ps1 -Exe .\YamanPcCleaner.exe -Anahtar $yol
+          } finally {
+            if (Test-Path -LiteralPath $yol) { Remove-Item -LiteralPath $yol -Force }
+          }
+
+      - name: Release oluştur
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create $env:GITHUB_REF_NAME `
+            .\YamanPcCleaner.exe `
+            .\YamanPcCleaner.exe.imza `
+            --title $env:GITHUB_REF_NAME `
+            --generate-notes
