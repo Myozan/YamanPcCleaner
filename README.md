@@ -16,6 +16,17 @@ Tanıtım sayfası: https://myozan.github.io/YamanPcCleaner/
 
 **[En son sürümü indir](https://github.com/Myozan/YamanPcCleaner/releases/latest)** · Windows 10 / 11 · Kurulum gerektirmez (tek exe) · Türkçe · Ücretsiz ve açık kaynak ([MIT](LICENSE)) · [Sürüm notları](CHANGELOG.md)
 
+## Dil seçenekleri
+
+Tanıtım sitesi Türkçe, İngilizce, Almanca ve Fransızca dil seçimi sunar. Dil tercihi tarayıcıda yerel olarak saklanır.
+
+- [Türkçe tanıtım sitesi](https://myozan.github.io/YamanPcCleaner/?lang=tr)
+- [English](https://myozan.github.io/YamanPcCleaner/?lang=en)
+- [Deutsch](https://myozan.github.io/YamanPcCleaner/?lang=de)
+- [Français](https://myozan.github.io/YamanPcCleaner/?lang=fr)
+
+> Not: Dil seçimi tanıtım sitesinin metinlerini değiştirir; Windows masaüstü uygulamasının arayüz dili bu ayardan bağımsızdır.
+
 ## Neler yapabilir
 
 - **Genel Bakış** — Açılınca bilgisayarının 100 üzerinden puanını gösterir: sanal bellek, boş yer ve gereksiz dosyalar, disk sağlığı (istersen ömrü ve sıcaklığı), dizüstünde pil sağlığı, açılışta başlayan programlar, oyun ayarları, NVIDIA sürücüsü ve son 7 günün çökmeleri. Her önerinin yanında onu düzelteceğin yere götüren bir düğme vardır; durum panosu yalnızca okur, hiçbir şeyi kendiliğinden değiştirmez. Sistem kimliğini (donanım özeti) tek tıkla kopyalar, bugüne kadar ne kadar yer açıldığını gösterir.
