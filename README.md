@@ -65,7 +65,7 @@ Windows bakım araçları çoğu zaman farklı menülere dağılır. Yaman PC Cl
 | **Bakım Raporu** | Yerel işlem geçmişi ve HTML raporu |
 
 <p align="center">
-  <img src="kaynaklar/onizleme-59.png" alt="Yaman PC Cleaner sistem araçları" width="48%">
+  <img src="docs/01-genel-bakis.jpg" alt="Yaman PC Cleaner sistem araçları" width="48%">
   <img src="docs/02-sistem-izleme.jpg" alt="Yaman PC Cleaner bakım araçları" width="48%">
 </p>
 
