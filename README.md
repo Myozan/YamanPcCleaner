@@ -136,6 +136,8 @@ docs/             GitHub Pages tanıtım sitesi
 | Hata bildirimi | [Issues](https://github.com/Myozan/YamanPcCleaner/issues) |
 | Katkı rehberi | [CONTRIBUTING.md](.github/CONTRIBUTING.md) |
 | Güvenlik politikası | [SECURITY.md](.github/SECURITY.md) |
+| Kurumsal kimlik rehberi | [BRAND-GUIDELINES.md](BRAND-GUIDELINES.md) |
+| Marka tasarım tokenları | [brand/tokens.json](brand/tokens.json) |
 
 ## Katkıda bulun
 
