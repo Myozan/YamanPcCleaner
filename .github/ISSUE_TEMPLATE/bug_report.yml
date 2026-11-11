@@ -1,0 +1,49 @@
+name: Hata bildirimi
+description: Bir hatayı veya beklenmeyen davranışı raporla
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Lütfen kişisel bilgileri, lisans anahtarlarını veya özel dosyaları paylaşma."
+  - type: input
+    id: version
+    attributes:
+      label: Uygulama sürümü
+      placeholder: "1.3.0"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows sürümü
+      placeholder: "Windows 11 24H2"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Sorun nedir?
+      description: Ne olduğunu açıkça anlat.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Yeniden oluşturma adımları
+      placeholder: "1. ...\n2. ...\n3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Beklenen davranış
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Hata mesajı veya ek bilgi
+      description: Varsa hassas bilgi içermeyen hata metnini ekle.
+    validations:
+      required: false
