@@ -502,7 +502,7 @@
   const selector = document.getElementById('language-select');
   if (!selector) return;
   function applyLanguage(lang) {
-    const map = translations[lang] || {};
+    const map = lang === 'en' ? common : Object.assign({}, common, translations[lang] || {});
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     let node;
     while ((node = walker.nextNode())) {
