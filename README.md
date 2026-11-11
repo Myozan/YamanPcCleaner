@@ -1,137 +1,165 @@
 <div align="center">
 
-# Yaman PC Cleaner
+<img src="kaynaklar/logo.png" alt="Yaman PC Cleaner" width="112" />
 
-### Windows için sade, şeffaf ve kullanıcı kontrolünde sistem bakımı.
+# YAMAN PC CLEANER
 
-RAM ve disk kullanımını izle, gereksiz dosyaları analiz et, Windows bakım araçlarına tek merkezden ulaş. Ne değişeceğine sen karar ver.
+### Windows bakımında kontrol sende.
 
-[![GitHub stars](https://img.shields.io/github/stars/Myozan/YamanPcCleaner?style=for-the-badge&logo=github&label=Stars)](https://github.com/Myozan/YamanPcCleaner/stargazers)
-[![Latest release](https://img.shields.io/github/v/release/Myozan/YamanPcCleaner?style=for-the-badge&logo=github&label=Release)](https://github.com/Myozan/YamanPcCleaner/releases/latest)
-[![License](https://img.shields.io/github/license/Myozan/YamanPcCleaner?style=for-the-badge)](LICENSE)
-[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?style=for-the-badge&logo=windows)](https://github.com/Myozan/YamanPcCleaner)
-[![Build](https://img.shields.io/github/actions/workflow/status/Myozan/YamanPcCleaner/dotnet.yml?branch=main&style=for-the-badge&label=Build)](https://github.com/Myozan/YamanPcCleaner/actions/workflows/dotnet.yml)
+**Windows 10 / 11 · Ücretsiz · Açık kaynak · Türkçe**
 
-[🌐 Tanıtım sitesi](https://myozan.github.io/YamanPcCleaner/) · [⬇️ Son sürüm](https://github.com/Myozan/YamanPcCleaner/releases/latest) · [🧾 Sürüm notları](CHANGELOG.md) · [🇬🇧 English](README.en.md)
+Sistemini tanı. Gereksiz dosyaları analiz et. Performans araçlarını tek merkezden yönet.  
+Önemli değişikliklerde son karar daima sende olsun.
+
+<p>
+  <a href="https://myozan.github.io/YamanPcCleaner/"><img src="https://img.shields.io/badge/ÜRÜN%20SAYFASI-Visit-0891b2?style=for-the-badge" alt="Ürün sayfası"></a>
+  <a href="https://github.com/Myozan/YamanPcCleaner/releases"><img src="https://img.shields.io/badge/İNDİR-GitHub%20Releases-2563eb?style=for-the-badge&logo=windows" alt="GitHub Releases"></a>
+  <a href="https://github.com/Myozan/YamanPcCleaner/stargazers"><img src="https://img.shields.io/github/stars/Myozan/YamanPcCleaner?style=for-the-badge&logo=github&label=STAR" alt="GitHub stars"></a>
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?style=flat-square&logo=windows" alt="Windows 10 and 11">
+  <img src="https://img.shields.io/badge/Language-C%23-68217A?style=flat-square&logo=csharp" alt="C sharp">
+  <img src="https://img.shields.io/badge/License-MIT-16a34a?style=flat-square" alt="MIT License">
+  <img src="https://img.shields.io/github/actions/workflow/status/Myozan/YamanPcCleaner/dotnet.yml?branch=main&style=flat-square&label=Build" alt="Build status">
+</p>
 
 </div>
 
 ---
 
+## Uygulamaya göz at
+
 <p align="center">
-  <a href="https://myozan.github.io/YamanPcCleaner/">
-    <img src="kaynaklar/onizleme-10.png" alt="Yaman PC Cleaner masaüstü uygulaması – ana ekran" width="900">
+  <a href="kaynaklar/onizleme-10.png">
+    <img src="kaynaklar/onizleme-10.png" alt="Yaman PC Cleaner v1.3.0 – Genel Bakış ekranı" width="96%">
   </a>
 </p>
 
+<p align="center"><sub>Yaman PC Cleaner v1.3.0 · Gerçek uygulama ekran görüntüsü</sub></p>
+
 ## Neden Yaman PC Cleaner?
 
-Windows bakım araçları çoğu zaman dağınık, teknik ve neyi değiştirdiği belirsizdir. Yaman PC Cleaner; sistem durumunu anlaşılır biçimde sunmayı, bakım seçeneklerini tek yerde toplamayı ve önemli değişikliklerde kontrolü kullanıcıda bırakmayı amaçlayan ücretsiz, açık kaynaklı bir Windows masaüstü uygulamasıdır.
+Windows bakım araçları çoğu zaman farklı menülere dağılır. Yaman PC Cleaner; sistem durumunu, bakım seçeneklerini ve performans araçlarını tek bir masaüstü arayüzünde bir araya getirir.
 
-**Temel yaklaşım:** Önce göster. Ne yapılacağını açıkla. Önemli değişikliklerde kullanıcı onayı al.
+<div align="center">
 
-## Öne çıkan özellikler
+| <img src="https://img.shields.io/badge/01-SİSTEM-2563eb?style=for-the-badge" alt="Sistem"> | <img src="https://img.shields.io/badge/02-PERFORMANS-0891b2?style=for-the-badge" alt="Performans"> | <img src="https://img.shields.io/badge/03-KONTROL-16a34a?style=for-the-badge" alt="Kontrol"> |
+|:---:|:---:|:---:|
+| **Tek bakışta durum** | **Canlı izleme** | **Önce kullanıcı onayı** |
+| Sistem puanı, disk, RAM ve başlangıç bilgileri | CPU, GPU, RAM, VRAM ve sıcaklık | Önemli değişikliklerde kontrol sende |
 
-| Alan | Neler sunar? |
+</div>
+
+## Özellikler
+
+| Modül | Açıklama |
 |---|---|
-| **Sistem özeti** | Sistem puanı, sanal bellek, disk alanı/sağlığı, pil ve başlangıç yükü hakkında görünüm |
-| **Performans analizi** | CPU, GPU, RAM, VRAM ve sıcaklıkların canlı izlenmesi; yavaşlık nedenlerine yönelik açıklamalar |
-| **Disk temizliği** | Geçici dosyalar, önbellekler ve Windows kalıntıları için analiz ve temizleme seçenekleri |
-| **Bellek araçları** | RAM kullanımı, bellek bekçisi ve sanal bellek yapılandırma seçenekleri |
-| **Windows bakımı** | Geri alınabilir sistem ayarları, DNS seçimi ve ağ testi |
-| **Oyun profili** | Güç modu ve oyun odaklı ayarları yönetme seçenekleri |
-| **Sürücü merkezi** | NVIDIA sürüm kontrolü, imza kontrolü ve kurulum öncesi geri yükleme noktası |
-| **Bakım raporu** | Yerel işlem günlüğü, bakım özeti ve HTML raporu |
+| **Genel Bakış** | Sistem puanı, sanal bellek, disk alanı/sağlığı, pil ve başlangıç yükü |
+| **Sistem İzleyici** | CPU, GPU, RAM, VRAM ve sıcaklıkların canlı takibi |
+| **Disk Temizliği** | Geçici dosya ve önbellekleri inceleme, alan kullanımını analiz etme |
+| **Bellek Araçları** | RAM izleme, bellek bekçisi ve sanal bellek seçenekleri |
+| **Windows Bakımı** | Geri alınabilir sistem ayarları, DNS seçimi ve ağ testi |
+| **Turbo / Oyun** | Güç modu ve oyun odaklı yapılandırma seçenekleri |
+| **Sürücü Merkezi** | NVIDIA sürüm kontrolü ve kurulum öncesi geri yükleme noktası akışı |
+| **Bakım Raporu** | Yerel işlem geçmişi ve HTML raporu |
 
 <p align="center">
-  <img src="kaynaklar/onizleme-59.png" alt="Yaman PC Cleaner sistem araçları" width="49%">
-  <img src="kaynaklar/onizleme-255.png" alt="Yaman PC Cleaner bakım araçları" width="49%">
+  <img src="kaynaklar/onizleme-59.png" alt="Yaman PC Cleaner sistem araçları" width="48%">
+  <img src="kaynaklar/onizleme-255.png" alt="Yaman PC Cleaner bakım araçları" width="48%">
 </p>
 
 ## İndir ve çalıştır
 
 <div align="center">
 
-### En güncel sürümü GitHub Releases üzerinden al
+### Güncel Windows sürümünü GitHub Releases sayfasından indir
 
-[![Download](https://img.shields.io/badge/İNDİR-Windows%20EXE-2563EB?style=for-the-badge&logo=windows)](https://github.com/Myozan/YamanPcCleaner/releases/latest)
+<a href="https://github.com/Myozan/YamanPcCleaner/releases/latest">
+  <img src="https://img.shields.io/badge/WINDOWS%20UYGULAMASINI%20İNDİR-2563EB?style=for-the-badge&logo=windows&logoColor=white" alt="Windows uygulamasını indir">
+</a>
 
 </div>
 
-1. [Son sürüm sayfasını aç](https://github.com/Myozan/YamanPcCleaner/releases/latest).
-2. Sürüm varlıkları arasından `YamanPcCleaner.exe` dosyasını indir.
-3. Dosyayı bir klasöre kaydet ve çalıştır. Kurulum sihirbazı gerekmez.
+1. [GitHub Releases](https://github.com/Myozan/YamanPcCleaner/releases) sayfasını aç.
+2. İlgili sürümün **Assets** bölümünden `YamanPcCleaner.exe` dosyasını indir.
+3. Dosyayı bir klasöre kaydedip çalıştır. Kurulum sihirbazı gerekmez.
 
-**Gereksinimler:** Windows 10 veya Windows 11. Uygulama normal kullanımda yönetici izni istemez; sistem genelinde değişiklik gerektiren belirli işlemlerde Windows izin sorabilir.
+**Gereksinimler:** Windows 10 veya Windows 11.
 
-> **Windows SmartScreen notu:** Uygulama şu anda ücretli Authenticode kod imzalama sertifikasıyla imzalanmış değildir. Bu nedenle Windows bilinmeyen yayıncı uyarısı gösterebilir. İndirmeden önce kaynak kodunu ve sürüm dosyalarını inceleyebilirsin. Güncelleme imza doğrulaması, uygulamanın kendi güncelleme mekanizmasına ait ayrı bir kontroldür.
+> **Yayın durumu:** Otomatik Release hattı hazırlandı. İlk sürüm etiketi ve Release yayınlama işlemi henüz tamamlanmadıysa Releases sayfasında indirme paketi görünmeyebilir. Bu durumda yukarıdaki Actions bağlantısından son derleme artifact'ına erişebilirsin.
+
+> **SmartScreen:** Uygulama şu anda ücretli Windows Authenticode kod imzalama sertifikasıyla imzalanmış değildir. Windows bilinmeyen yayıncı uyarısı gösterebilir. Çalıştırmadan önce kaynak kodunu ve sürüm dosyalarını incele.
 
 ## Güvenlik ve gizlilik
 
-- **Açık kaynak:** Kaynak kodu bu depoda incelenebilir ve lisans koşulları altında derlenebilir.
-- **Kullanıcı kontrolü:** Sistem ayarları, sürücü kurulumu ve temizleme işlemleri kullanıcı tarafından başlatılır.
-- **Geri alınabilir ayarlar:** Desteklenen Windows, DNS, Turbo ve sanal bellek değişiklikleri öncesinde eski değerler yedeklenir.
+- **Açık kaynak:** Kod bu depoda incelenebilir.
+- **Kullanıcı kontrolü:** Bakım ve sistem değişiklikleri kullanıcı tarafından başlatılır.
+- **Geri alınabilir ayarlar:** Desteklenen ayarlar değişiklik öncesinde yedeklenir.
 - **Telemetri yok:** Uygulama kişisel kullanım telemetrisi toplamak üzere tasarlanmamıştır.
-- **İmzalı uygulama güncellemeleri:** Uygulama güncelleme paketinin imzasını doğrulamadan kuruluma geçmez. Bu mekanizma Windows Authenticode imzası ile aynı şey değildir.
+- **Güncelleme doğrulaması:** Uygulama içi güncelleme imza kontrolü, Windows Authenticode imzasından ayrı bir mekanizmadır.
 
-Güvenlik açığı bildirmek için lütfen herkese açık bir issue açmak yerine [SECURITY.md](.github/SECURITY.md) yönergelerini kullan.
+Güvenlik açığı bildirimleri için [SECURITY.md](.github/SECURITY.md) yönergelerini kullan.
 
-## Derleme
+## Kaynak kodundan derle
 
-Proje klasik Windows .NET Framework 4.x C# derleyicisini kullanır. Derleme Windows üzerinde yapılmalıdır.
+Windows üzerinde .NET Framework C# derleyicisiyle:
 
 ```bat
 derle.cmd
 ```
 
-Başarılı derleme sonunda depo kökünde `YamanPcCleaner.exe` oluşur. Betik `src\` altındaki C# dosyalarını otomatik toplar.
+Başarılı derlemede depo kökünde `YamanPcCleaner.exe` oluşur.
 
 ### Proje yapısı
 
 ```text
 src/
   Program.cs
-  Cekirdek/       Uygulama motoru, sistem ölçümü, bakım ve güncelleme
-  Arayuz/         WinForms pencereleri, sekmeler ve görsel tema
-araclar/          Derleme, test, imzalama ve yayınlama betikleri
-kaynaklar/        Uygulama simgeleri ve görseller
+  Cekirdek/       Uygulama motoru, sistem ölçümü ve bakım
+  Arayuz/         WinForms pencereleri ve görsel tema
+araclar/          Derleme, test ve yayınlama betikleri
+kaynaklar/        Uygulama simgeleri ve ekran görüntüleri
 docs/             GitHub Pages tanıtım sitesi
 .github/
-  workflows/      CI, Pages ve Release otomasyonları
+  workflows/      CI, Pages ve Release otomasyonu
 ```
 
-## Sürümler ve yayınlama
+## Proje bağlantıları
 
-- [Tüm sürümler](https://github.com/Myozan/YamanPcCleaner/releases)
-- [Değişiklik günlüğü](CHANGELOG.md)
-- [GitHub Actions iş akışları](https://github.com/Myozan/YamanPcCleaner/actions)
-
-Yeni sürümler `src/Cekirdek/SurumBilgisi.cs` dosyasındaki sürüm bilgisiyle eşleştirilir. Release otomasyonu, gerekli özel imzalama anahtarı tanımlı değilse imzasız güncelleme yayınlamaz. Gizli imzalama anahtarı depoya eklenmemelidir.
-
-## Yol haritası
-
-Geliştirme öncelikleri ve öneriler [GitHub Issues](https://github.com/Myozan/YamanPcCleaner/issues) üzerinden takip edilir. Yeni fikir, hata bildirimi veya iyileştirme önerisi açabilirsin.
+| Kaynak | Bağlantı |
+|---|---|
+| Ürün tanıtım sitesi | [myozan.github.io/YamanPcCleaner](https://myozan.github.io/YamanPcCleaner/) |
+| Sürüm geçmişi | [GitHub Releases](https://github.com/Myozan/YamanPcCleaner/releases) |
+| Değişiklik günlüğü | [CHANGELOG.md](CHANGELOG.md) |
+| Geliştirme ve derleme | [GitHub Actions](https://github.com/Myozan/YamanPcCleaner/actions) |
+| Hata bildirimi | [Issues](https://github.com/Myozan/YamanPcCleaner/issues) |
+| Katkı rehberi | [CONTRIBUTING.md](.github/CONTRIBUTING.md) |
+| Güvenlik politikası | [SECURITY.md](.github/SECURITY.md) |
 
 ## Katkıda bulun
 
-Kod, test, dokümantasyon, çeviri ve hata raporları değerlidir. Başlamadan önce [CONTRIBUTING.md](.github/CONTRIBUTING.md) dosyasını oku. Davranış standartlarımız için [Code of Conduct](.github/CODE_OF_CONDUCT.md) dosyasına bak.
+Kod, test, dokümantasyon, çeviri ve hata raporları değerlidir. Katkı göndermeden önce [CONTRIBUTING.md](.github/CONTRIBUTING.md) ve [Code of Conduct](.github/CODE_OF_CONDUCT.md) dosyalarını incele.
 
-## Lisans ve teşekkür
+## Lisans
 
-Yaman PC Cleaner [MIT Lisansı](LICENSE) ile yayımlanır.
-
-Windows bakım seçeneklerinin bir bölümü [Raphire/Win11Debloat](https://github.com/Raphire/Win11Debloat) projesinden esinlenmiştir; ilgili lisans ve atıflar korunur.
+[MIT Lisansı](LICENSE) ile yayımlanır. Kullanılan üçüncü taraf bileşenlerin lisans ve atıfları depoda korunur.
 
 ---
 
 <div align="center">
 
-### Proje işine yaradı mı?
+## Bu proje işine yaradı mı?
 
-⭐ **GitHub'da yıldız vererek projeyi destekleyebilirsin.** Yıldız, projeyi takip etmeyi ve başkalarının keşfetmesini kolaylaştırır.
+Bir ⭐ bırakarak Yaman PC Cleaner'ın daha fazla Windows kullanıcısı tarafından keşfedilmesine destek olabilirsin.
 
-[![Star on GitHub](https://img.shields.io/badge/⭐%20Star%20Yaman%20PC%20Cleaner-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Myozan/YamanPcCleaner)
+<a href="https://github.com/Myozan/YamanPcCleaner/stargazers">
+  <img src="https://img.shields.io/badge/⭐%20YAMAN%20PC%20CLEANER'A%20STAR%20VER-181717?style=for-the-badge&logo=github" alt="GitHub'da yıldız ver">
+</a>
 
-**Yaman Software** · Technology · Innovation · Software
+**YAMAN SOFTWARE**  
+Technology · Innovation · Software
+
+<sub>Designed & developed with a focus on transparency and user control.</sub>
 
 </div>
