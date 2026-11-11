@@ -66,7 +66,7 @@ Windows bakım araçları çoğu zaman farklı menülere dağılır. Yaman PC Cl
 
 <p align="center">
   <img src="kaynaklar/onizleme-59.png" alt="Yaman PC Cleaner sistem araçları" width="48%">
-  <img src="kaynaklar/onizleme-255.png" alt="Yaman PC Cleaner bakım araçları" width="48%">
+  <img src="docs/02-sistem-izleme.jpg" alt="Yaman PC Cleaner bakım araçları" width="48%">
 </p>
 
 ## İndir ve çalıştır
