@@ -150,6 +150,13 @@
   .adim h3 { margin:0 0 5px; font-size:1rem; }
   .adim p { margin:0; color:var(--soluk); font-size:.9rem; }
 
+  .ekran-galerisi { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .ekran-kart { overflow:hidden; border:1px solid var(--cizgi); border-radius:16px; background:rgba(15,26,44,.78); }
+  .ekran-kart img { display:block; width:100%; height:auto; aspect-ratio:16/10; object-fit:cover; background:#0b1524; }
+  .ekran-kart div { padding:13px 15px; }
+  .ekran-kart strong { display:block; color:var(--yazi); font-size:.92rem; }
+  .ekran-kart span { color:var(--soluk); font-size:.8rem; }
+  .galeri-not { margin:14px 0 0; color:var(--soluk); font-size:.82rem; }
   .guvenlik { display:grid; grid-template-columns:.95fr 1.05fr; gap:26px; align-items:start; }
   .guvenlik-kart { border:1px solid var(--cizgi); border-radius:var(--yaricap); padding:24px; background:linear-gradient(180deg, rgba(21,36,59,.8), rgba(15,26,44,.72)); }
   .guvenlik-kart h2 { margin:0 0 8px; font-size:1.6rem; letter-spacing:-.02em; }
@@ -266,6 +273,35 @@
       </div>
       <div class="parilti"></div>
     </div>
+  </section>
+
+  <section id="ekran-goruntuleri">
+    <div class="bolum-baslik">
+      <div class="etiket">Uygulamadan görüntüler</div>
+      <h2>Arayüzü yakından tanı</h2>
+      <p>Yaman PC Cleaner'ın gerçek uygulama önizlemeleri. Temel araçları tek bir masaüstü deneyiminde bir araya getirir.</p>
+    </div>
+    <div class="ekran-galerisi">
+      <article class="ekran-kart">
+        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-10.png" target="_blank" rel="noopener">
+          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-10.png" alt="Yaman PC Cleaner uygulama ekran görüntüsü 1" loading="lazy">
+        </a>
+        <div><strong>Uygulama önizlemesi</strong><span>Yaman PC Cleaner arayüzü</span></div>
+      </article>
+      <article class="ekran-kart">
+        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-59.png" target="_blank" rel="noopener">
+          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-59.png" alt="Yaman PC Cleaner uygulama ekran görüntüsü 2" loading="lazy">
+        </a>
+        <div><strong>Uygulama önizlemesi</strong><span>Sistem araçlarından görünüm</span></div>
+      </article>
+      <article class="ekran-kart">
+        <a href="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-255.png" target="_blank" rel="noopener">
+          <img src="https://raw.githubusercontent.com/Myozan/YamanPcCleaner/main/kaynaklar/onizleme-255.png" alt="Yaman PC Cleaner uygulama ekran görüntüsü 3" loading="lazy">
+        </a>
+        <div><strong>Uygulama önizlemesi</strong><span>Bakım deneyiminden görünüm</span></div>
+      </article>
+    </div>
+    <p class="galeri-not">Görüntüleri büyütmek için üzerlerine tıklayabilirsin.</p>
   </section>
 
   <section id="ozellikler">
