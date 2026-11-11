@@ -32,7 +32,7 @@ Sistemini tanı. Gereksiz dosyaları analiz et. Performans araçlarını tek mer
 
 <p align="center">
   <a href="kaynaklar/onizleme-10.png">
-    <img src="kaynaklar/onizleme-10.png" alt="Yaman PC Cleaner v1.3.0 – Genel Bakış ekranı" width="96%">
+    <img src="kaynaklar/Analiz çıktısı 1.png" alt="Yaman PC Cleaner v1.3.0 – Genel Bakış ekranı" width="96%">
   </a>
 </p>
 
